@@ -1,0 +1,237 @@
+﻿{
+  "mod_id": "ufc_female_mission",
+  "mod_description": "Send your female bot out to an underground fight club. You can win money but there's no guarantee your bot will win.",
+  "mod_priority": -600,
+  "missions": [
+    {
+      "id": "ufc_female_1a",
+      "title": "UFC Female D",
+      "description": "Enter {mark}[bot]{/} in a D level fight at the {mark}'Fuck Em Up' underground fight club{/}. If the bot or any of [bot.hisher] parts exceed D rating you may be caught cheating.",
+      "launch_text": "You tell {mark}[bot]{/} you are sending [bot.himher] to the {mark}'Fuck Em Up'{/} underground fight club to fight in a {mark}D{/} level fight.\n\nYou go on the club's grey net site to pay the {mark}$200 entry fee{/} to register [bot.himher] for the fight.",
+      "available": "now('evening','monday')",
+##      "available": "now('evening')",                                  ##  TESTING LINE
+      "requirements": [
+        ("bot.gender=='female'","{mark}Bot{/} is {mark}female{/}"),
+        ("bot.bot_combat>='D'","{mark}Combat{/} at {mark}D+{/}"),
+      ],
+      "duration": 1,
+      "costs": [("money",200)],
+##  ALL OUTCOME PARAMETERS ARE IN EXTERNAL FUNCTION IN THE COMPANION .rpy FILE
+      "results": [
+        {
+          "weight": 100,
+          "type": "flavor",
+          "bypass_function": "ufc_female_outcome_d",  ##  D level fight outome
+          "result_text": "",                        ##  ALL TEXT IN EXTERNAL FUNCTION
+        },
+      ],
+    },
+    {
+      "id": "ufc_female_1b",
+      "title": "UFC Female D",
+      "description": "Enter {mark}[bot]{/} in a D level fight at the {mark}'Fuck Em Up' underground fight club{/}. If the bot or any of [bot.hisher] parts exceed D rating you may be caught cheating.",
+      "launch_text": "You tell {mark}[bot]{/} you are sending [bot.himher] to the {mark}'Fuck Em Up'{/} underground fight club to fight in a {mark}D{/} level fight.\n\nYou go on the club's grey net site to pay the {mark}$200 entry fee{/} to register [bot.himher] for the fight.",
+      "available": "now('evening','wednesday')",
+##      "available": "now('evening')",                                  ##  TESTING LINE
+      "requirements": [
+        ("bot.gender=='female'","{mark}Bot{/} is {mark}female{/}"),
+        ("bot.bot_combat>='D'","{mark}Combat{/} at {mark}D+{/}"),
+      ],
+      "duration": 1,
+      "costs": [("money",200)],
+##  ALL OUTCOME PARAMETERS ARE IN EXTERNAL FUNCTION IN THE COMPANION .rpy FILE
+      "results": [
+        {
+          "weight": 100,
+          "type": "flavor",
+          "bypass_function": "ufc_female_outcome_d",  ##  D level fight outome
+          "result_text": "",                        ##  ALL TEXT IN EXTERNAL FUNCTION
+        },
+      ],
+    },
+    {
+      "id": "ufc_female_2a",
+      "title": "UFC Female C",
+      "description": "Enter {mark}[bot]{/} in a C level fight at the {mark}'Fuck Em Up' underground fight club{/}. If the bot or any of [bot.hisher] parts exceed C rating you may be caught cheating.",
+      "launch_text": "You tell {mark}[bot]{/} you are sending [bot.himher] to the {mark}'Fuck Em Up'{/} underground fight club to fight in a {mark}C{/} level fight.\n\nYou go on the club's grey net site to pay the {mark}$400 entry fee{/} to register [bot.himher] for the fight.",
+      "available": "now('evening','tuesday')",
+##      "available": "now('evening')",                                  ##  TESTING LINE
+      "requirements": [
+        ("bot.gender=='female'","{mark}Bot{/} is {mark}female{/}"),
+        ("bot.bot_combat>='D'","{mark}Combat{/} at {mark}D+{/}"),
+      ],
+      "duration": 1,
+      "costs": [("money",400)],
+##  ALL OUTCOME PARAMETERS ARE IN EXTERNAL FUNCTION IN THE COMPANION .rpy FILE
+      "results": [
+        {
+          "weight": 100,
+          "type": "flavor",
+          "bypass_function": "ufc_female_outcome_c",       ##  C level fight outome
+          "result_text": "",                        ##  ALL TEXT IN EXTERNAL FUNCTION
+        },
+      ],
+    },
+    {
+      "id": "ufc_female_2b",
+      "title": "UFC Female C",
+      "description": "Enter {mark}[bot]{/} in a C level fight at the {mark}'Fuck Em Up' underground fight club{/}. If the bot or any of [bot.hisher] parts exceed C rating you may be caught cheating.",
+      "launch_text": "You tell {mark}[bot]{/} you are sending [bot.himher] to the {mark}'Fuck Em Up'{/} underground fight club to fight in a {mark}C{/} level fight.\n\nYou go on the club's grey net site to pay the {mark}$400 entry fee{/} to register [bot.himher] for the fight.",
+      "available": "now('evening','thursday')",
+##      "available": "now('evening')",                                  ##  TESTING LINE
+      "requirements": [
+        ("bot.gender=='female'","{mark}Bot{/} is {mark}female{/}"),
+        ("bot.bot_combat>='D'","{mark}Combat{/} at {mark}D+{/}"),
+      ],
+      "duration": 1,
+      "costs": [("money",400)],
+##  ALL OUTCOME PARAMETERS ARE IN EXTERNAL FUNCTION IN THE COMPANION .rpy FILE
+      "results": [
+        {
+          "weight": 100,
+          "type": "flavor",
+          "bypass_function": "ufc_female_outcome_c",       ##  C level fight outome
+          "result_text": "",                        ##  ALL TEXT IN EXTERNAL FUNCTION
+        },
+      ],
+    },
+    {
+      "id": "ufc_female_3a",
+      "title": "UFC Female B",
+      "description": "Enter {mark}[bot]{/} in a B level fight at the {mark}'Fuck Em Up' underground fight club{/}. If the bot or any of [bot.hisher] parts exceed B rating you may be caught cheating.",
+      "launch_text": "You tell {mark}[bot]{/} you are sending [bot.himher] to the {mark}'Fuck Em Up'{/} underground fight club to fight in a {mark}B{/} level fight.\n\nYou go on the club's grey net site to pay the {mark}$600 entry fee{/} to register [bot.himher] for the fight.",
+      "available": "now('evening','monday')",
+##      "available": "now('evening')",                                  ##  TESTING LINE
+      "requirements": [
+        ("bot.gender=='female'","{mark}Bot{/} is {mark}female{/}"),
+        ("bot.bot_combat>='D'","{mark}Combat{/} at {mark}D+{/}"),
+      ],
+      "duration": 1,
+      "costs": [("money",600)],
+##  ALL OUTCOME PARAMETERS ARE IN EXTERNAL FUNCTION IN THE COMPANION .rpy FILE
+      "results": [
+        {
+          "weight": 100,
+          "type": "flavor",
+          "bypass_function": "ufc_female_outcome_b",       ##  B level fight outome
+          "result_text": "",                        ##  ALL TEXT IN EXTERNAL FUNCTION
+        },
+      ],
+    },
+    {
+      "id": "ufc_female_3b",
+      "title": "UFC Female B",
+      "description": "Enter {mark}[bot]{/} in a B level fight at the {mark}'Fuck Em Up' underground fight club{/}. If the bot or any of [bot.hisher] parts exceed B rating you may be caught cheating.",
+      "launch_text": "You tell {mark}[bot]{/} you are sending [bot.himher] to the {mark}'Fuck Em Up'{/} underground fight club to fight in a {mark}B{/} level fight.\n\nYou go on the club's grey net site to pay the {mark}$600 entry fee{/} to register [bot.himher] for the fight.",
+      "available": "now('evening','wednesday')",
+##      "available": "now('evening')",                                  ##  TESTING LINE
+      "requirements": [
+        ("bot.gender=='female'","{mark}Bot{/} is {mark}female{/}"),
+        ("bot.bot_combat>='D'","{mark}Combat{/} at {mark}D+{/}"),
+      ],
+      "duration": 1,
+      "costs": [("money",600)],
+##  ALL OUTCOME PARAMETERS ARE IN EXTERNAL FUNCTION IN THE COMPANION .rpy FILE
+      "results": [
+        {
+          "weight": 100,
+          "type": "flavor",
+          "bypass_function": "ufc_female_outcome_b",       ##  B level fight outome
+          "result_text": "",                        ##  ALL TEXT IN EXTERNAL FUNCTION
+        },
+      ],
+    },
+    {
+      "id": "ufc_female_4a",
+      "title": "UFC Female A",
+      "description": "Enter {mark}[bot]{/} in a A level fight at the {mark}'Fuck Em Up' underground fight club{/}. If the bot or any of [bot.hisher] parts exceed A rating you may be caught cheating.",
+      "launch_text": "You tell {mark}[bot]{/} you are sending [bot.himher] to the {mark}'Fuck Em Up'{/} underground fight club to fight in an {mark}A{/} level fight.\n\nYou go on the club's grey net site to pay the {mark}$800 entry fee{/} to register [bot.himher] for the fight.",
+      "available": "now('evening','tuesday')",
+##      "available": "now('evening')",                                  ##  TESTING LINE
+      "requirements": [
+        ("bot.gender=='female'","{mark}Bot{/} is {mark}female{/}"),
+        ("bot.bot_combat>='D'","{mark}Combat{/} at {mark}D+{/}"),
+      ],
+      "duration": 1,
+      "costs": [("money",800)],
+##  ALL OUTCOME PARAMETERS ARE IN EXTERNAL FUNCTION IN THE COMPANION .rpy FILE
+      "results": [
+        {
+          "weight": 100,
+          "type": "flavor",
+          "bypass_function": "ufc_female_outcome_a",       ##  A level fight outome
+          "result_text": "",                        ##  ALL TEXT IN EXTERNAL FUNCTION
+        },
+      ],
+    },
+    {
+      "id": "ufc_female_4b",
+      "title": "UFC Female A",
+      "description": "Enter {mark}[bot]{/} in a A level fight at the {mark}'Fuck Em Up' underground fight club{/}. If the bot or any of [bot.hisher] parts exceed A rating you may be caught cheating.",
+      "launch_text": "You tell {mark}[bot]{/} you are sending [bot.himher] to the {mark}'Fuck Em Up'{/} underground fight club to fight in an {mark}A{/} level fight.\n\nYou go on the club's grey net site to pay the {mark}$800 entry fee{/} to register [bot.himher] for the fight.",
+      "available": "now('evening','thursday')",
+##      "available": "now('evening')",                                  ##  TESTING LINE
+      "requirements": [
+        ("bot.gender=='female'","{mark}Bot{/} is {mark}female{/}"),
+        ("bot.bot_combat>='D'","{mark}Combat{/} at {mark}D+{/}"),
+      ],
+      "duration": 1,
+      "costs": [("money",800)],
+##  ALL OUTCOME PARAMETERS ARE IN EXTERNAL FUNCTION IN THE COMPANION .rpy FILE
+      "results": [
+        {
+          "weight": 100,
+          "type": "flavor",
+          "bypass_function": "ufc_female_outcome_a",       ##  A level fight outome
+          "result_text": "",                        ##  ALL TEXT IN EXTERNAL FUNCTION
+        },
+      ],
+    },
+    {
+      "id": "ufc_female_5a",
+      "title": "UFC Female Open",
+      "description": "Enter {mark}[bot]{/} in an open fight at the {mark}'Fuck Em Up' underground fight club{/}. Most bots entered will be S level.",
+      "launch_text": "You tell {mark}[bot]{/} you are sending [bot.himher] to the {mark}'Fuck Em Up'{/} underground fight club to fight in an {mark}open{/} fight.\n\nYou go on the club's grey net site to pay the {mark}$1,000 entry fee{/} to register [bot.himher] for the fight.",
+      "available": "now('evening','friday')",
+##      "available": "now('evening')",                                  ##  TESTING LINE
+      "requirements": [
+        ("bot.gender=='female'","{mark}Bot{/} is {mark}female{/}"),
+        ("bot.bot_combat>='D'","{mark}Combat{/} at {mark}D+{/}"),
+      ],
+      "duration": 1,
+      "costs": [("money",1000)],
+##  ALL OUTCOME PARAMETERS ARE IN EXTERNAL FUNCTION IN THE COMPANION .rpy FILE
+      "results": [
+        {
+          "weight": 100,
+          "type": "flavor",
+          "bypass_function": "ufc_female_outcome_s",       ##  S level fight outome
+          "result_text": "",                        ##  ALL TEXT IN EXTERNAL FUNCTION
+        },
+      ],
+    },
+    {
+      "id": "ufc_female_5b",
+      "title": "UFC Female Open",
+      "description": "Enter {mark}[bot]{/} in an open fight at the {mark}'Fuck Em Up' underground fight club{/}. Most bots entered will be S level.",
+      "launch_text": "You tell {mark}[bot]{/} you are sending [bot.himher] to the {mark}'Fuck Em Up'{/} underground fight club to fight in an {mark}open{/} fight.\n\nYou go on the club's grey net site to pay the {mark}$1,000 entry fee{/} to register [bot.himher] for the fight.",
+      "available": "now('evening','saturday')",
+##      "available": "now('evening')",                                  ##  TESTING LINE
+      "requirements": [
+        ("bot.gender=='female'","{mark}Bot{/} is {mark}female{/}"),
+        ("bot.bot_combat>='D'","{mark}Combat{/} at {mark}D+{/}"),
+      ],
+      "duration": 1,
+      "costs": [("money",1000)],
+##  ALL OUTCOME PARAMETERS ARE IN EXTERNAL FUNCTION IN THE COMPANION .rpy FILE
+      "results": [
+        {
+          "weight": 100,
+          "type": "flavor",
+          "bypass_function": "ufc_female_outcome_s",       ##  S level fight outome
+          "result_text": "",                        ##  ALL TEXT IN EXTERNAL FUNCTION
+        },
+      ],
+    },
+  ],
+}

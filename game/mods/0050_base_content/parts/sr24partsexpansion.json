@@ -1,0 +1,672 @@
+{
+  "mod_id": "sr24_parts_expansion",
+  "mod_description": "New parts: ears, Implants, and Penis. All ratings (F through S).",
+##  "mod_description": "New parts: Ears and Implants. All ratings (F through S).",  ##  PREVIOUS VERSION
+  "mod_priority": -800,
+
+  "bot_parts":[
+    ##  ears
+    ##  xp_mult - social: medium
+    ##  defects - punctured eardrum
+    {
+      "id": "sr24_ears_f",
+      "name": "SoundSense 3",
+      "description": "Low end ears from SoundSense, the master of sound sensing. Bots will understand clearly spoken commands from most people.",
+      "rate": "F",
+      "xp_mult": {
+        "bot_social": 0.67,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_ears",
+      "damage_mult": 1.25,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("ears_drum",85,1),("ears_drum",65,3),("ears_drum",40,5),("ears_drum",25,10),("ears_drum",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",75),
+          ("mechanics",20),
+          ("computers",5),
+      ],
+      "difficulty": 0.75,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 8,
+        "cheap": 8,
+      },
+    },
+    {
+      "id": "sr24_ears_e",
+      "name": "AudioTech IV",
+      "description": "Entry level ears from AudioTech. Your bots will understand but may miss nuances in low or high pitched voices.",
+      "rate": "E",
+      "xp_mult": {
+        "bot_social": 0.78,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_ears",
+      "damage_mult": 1.1,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("ears_drum",75,1),("ears_drum",50,3),("ears_drum",25,5),("ears_drum",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",75),
+          ("mechanics",20),
+          ("computers",5),
+      ],
+      "difficulty": 0.9,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 10,
+        "cheap": 10,
+      },
+    },
+    {
+      "id": "sr24_ears_d",
+      "name": "Acoustec 2",
+      "description": "Affordable ears from Acoustec, a new player in the industry. The early feedback is adequate and affordable.",
+      "rate": "D",
+      "xp_mult": {
+        "bot_social": 0.89,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_ears",
+      "damage_mult": 1.0,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("ears_drum",50,1),("ears_drum",25,3),("ears_drum",10,5),("ears_drum",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",75),
+          ("mechanics",20),
+          ("computers",5),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 10,
+        "cheap": 8,
+        "nice": 10,
+      },
+    },
+    {
+      "id": "sr24_ears_c",
+      "name": "SoundSense 6",
+      "description": "Mid-Range ears from SoundSense, the master of sound sensing. Good frequency range, very similar to human ears. Supports strong social skills.",
+      "rate": "C",
+      "xp_mult": {
+        "bot_social": 1.00,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_ears",
+      "damage_mult": 1.0,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("ears_drum",25,1),("ears_drum",10,3),("ears_drum",5,5),("ears_drum",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",75),
+          ("mechanics",20),
+          ("computers",5),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 8,
+        "cheap": 3,
+        "nice": 6,
+        "good": 4,
+      },
+    },{
+      "id": "sr24_ears_b",
+      "name": "AudioTech X",
+      "description": "High end ears from AudioTech. Not only will your bot understand everything, they'll interpret nuances in all voices.",
+      "rate": "B",
+      "xp_mult": {
+        "bot_social": 1.17,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_ears",
+      "damage_mult": 1.0,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("ears_drum",15,1),("ears_drum",5,3),("ears_drum",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",75),
+          ("mechanics",20),
+          ("computers",5),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 7,
+        "cheap": 1,
+        "nice": 6,
+        "good": 4,
+      },
+    },
+    {
+      "id": "sr24_ears_a",
+      "name": "Acoustec X6",
+      "description": "High end ears from the new kid on the block, Acoustec.  Early review say they may give highly rated Sound Sense some competition.",
+      "rate": "A",
+      "xp_mult": {
+        "bot_social": 1.33,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_ears",
+      "damage_mult": 0.9,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("ears_drum",5,1),("ears_drum",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",75),
+          ("mechanics",20),
+          ("computers",5),
+      ],
+      "difficulty": 1.1,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 4,
+        "good": 2,
+        "luxury": 4,
+      },
+    },
+    {
+      "id": "sr24_ears_s",
+      "name": "SoundSense 9",
+      "description": "Military grade ears from SoundSense, the master of sound sensing. These are really hard to come by, their frequency range is incredible.",
+      "rate": "S",
+      "xp_mult": {
+        "bot_social": 1.5,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_ears",
+      "damage_mult": 0.75,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",75),
+          ("mechanics",20),
+          ("computers",5),
+      ],
+      "difficulty": 1.25,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 2,
+        "good": 1,
+        "luxury": 2,
+      },
+    },
+    ##  Implants
+    ##  xp_mult for training entered - sex: medium
+    ##  defect: implant_shell - gel leaks from torn shell
+    {
+      "id": "sr24_implants_f",
+      "name": "Curves II",
+      "description": "Your bot will have large, sexy curves but don't touch! Looks good but the materials are hard as a rock.",
+      "rate": "F",
+      "xp_mult": {
+        "bot_sex": 0.10,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_implants",
+      "damage_mult": 1.2,
+      "possible_defects": [
+          (None,100,100),(None,0,0),
+          ("implant_shell",100,2),("implant_shell",85,3),("implant_shell",70,5),("implant_shell",50,8),("implant_shell",25,10),("implant_shell",0,0),
+          ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("mechanics",100),
+      ],
+      "difficulty": 0.75,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 8,
+        "cheap": 8,
+      },
+    },
+    {
+      "id": "sr24_implants_e",
+      "name": "Sculpt M2",
+      "description": "The tag line 'firm & fabulous' is only half right. Low grade materials keep the price low but you get what you pay for.",
+      "rate": "E",
+      "xp_mult": {
+        "bot_sex": 0.83,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_implants",
+      "damage_mult": 0.9,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("implant_shell",100,1),("implant_shell",75,3),("implant_shell",50,5),("implant_shell",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("mechanics",100),
+      ],
+      "difficulty": 0.90,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 10,
+        "cheap": 10,
+      },
+    },
+    {
+      "id": "sr24_implants_d",
+      "name": "Voluptuous",
+      "description": "Decent materials give your bot a pleasing feel but the shape is definately unnatural. Hey, some people may like it!",
+      "rate": "D",
+      "xp_mult": {
+        "bot_sex": 0.92,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_implants",
+      "damage_mult": 0.75,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("implant_shell",50,1),("implant_shell",25,3),("implant_shell",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("mechanics",100),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 10,
+        "cheap": 8,
+        "nice": 5,
+      },
+    },
+    {
+      "id": "sr24_implants_c",
+      "name": "Curves VI",
+      "description": "The newer model from Curves is a good compromise for most purposes, decent quality in both look and feel at a reasonable price.",
+      "rate": "C",
+      "xp_mult": {
+        "bot_sex": 1.0,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_implants",
+      "damage_mult": 0.6,
+      "possible_defects": [
+          (None,100,100),(None,0,0),
+          ("implant_shell",35,1),("implant_shell",10,3),("implant_shell",0,0),
+          ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("mechanics",100),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 8,
+        "cheap": 3,
+        "nice": 8,
+        "good": 4,
+      },
+    },{
+      "id": "sr24_implants_b",
+      "name": "Empress",
+      "description": "The 'Empress' model will give your bot outstanding sex appeal. This is the most affordable luxury implants available.",
+      "rate": "B",
+      "xp_mult": {
+        "bot_sex": 1.08,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_implants",
+      "damage_mult": 0.45,
+      "possible_defects": [
+          (None,100,100),(None,0,0),
+          ("implant_shell",20,1),("implant_shell",5,3),("implant_shell",0,0),
+          ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("mechanics",100),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 7,
+        "cheap": 1,
+        "nice": 6,
+        "good": 2,
+      },
+    },
+    {
+      "id": "sr24_implants_a",
+      "name": "Silhouette",
+      "description": "One of the best brands available, high priced but when you see and feel your bot you'll know why!",
+      "rate": "A",
+      "xp_mult": {
+        "bot_sex": 1.17,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_implants",
+      "damage_mult": 0.27,
+      "possible_defects": [
+          (None,100,100),(None,0,0),
+          ("implant_shell",10,1),("implant_shell",0,0),
+          ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("mechanics",100),
+      ],
+      "difficulty": 1.1,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 4,
+        "good": 2,
+        "luxury": 4,
+      },
+    },
+    {
+      "id": "sr24_implants_s",
+      "name": "Goddess",
+      "description": "Perfection for those who can afford it! No compromises, these are absolutely the most attractive and realistic implants available.",
+      "rate": "S",
+      "xp_mult": {
+        "bot_sex": 1.25,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_implants",
+      "damage_mult": 0.22,
+      "possible_defects": [
+          (None,100,100),(None,0,0),
+          ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("mechanics",100),
+      ],
+      "difficulty": 1.25,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 2,
+        "good": 1,
+        "luxury": 2,
+      },
+    },
+    ##  Penis
+    ##  xp_mult - sex: medium except for F
+    ##  defects - scratch, pump failure, fluid leak
+    {
+      "id": "sr24_penis_f",
+      "name": "Gen-P X2",
+      "description": "Barely functional penis, you might want to consider using a dildo instead of a bot with this one.",
+      "rate": "F",
+      "xp_mult": {
+        "bot_sex": 0.1,
+      },
+      "price_mult": 1.00,
+      "slot": "bot_penis",
+      "damage_mult": 1.20,
+      "possible_defects": [
+          (None,100,100),(None,0,0),
+          ("scratch_p",90,1),("scratch_p",75,2),("scratch_p",50,3),("scratch_p",25,10),("scratch_p",0,0),
+          ("pump_failure_p",90,1),("pump_failure_p",75,2),("pump_failure_p",50,3),("pump_failure_p",25,10),("pump_failure_p",0,0),
+          ("fluid_leak_p",90,1),("fluid_leak_p",75,2),("fluid_leak_p",50,3),("fluid_leak_p",25,10),("fluid_leak_p",0,0),
+          ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",30),
+          ("mechanics",65),
+          ("computers",5),
+      ],
+      "difficulty": 0.75,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 4,
+        "cheap": 3,
+      },
+    },
+    {
+      "id": "sr24_penis_e",
+      "name": "Gen-P X5",
+      "description": "Low quality penis, looks good but extra stiffness sounds good until you experience the chafing it causes!",
+      "rate": "E",
+      "xp_mult": {
+        "bot_sex": 0.78,
+      },
+      "price_mult": 1.00,
+      "slot": "bot_penis",
+      "damage_mult": 0.90,
+      "possible_defects": [
+          (None,100,100),(None,0,0),
+          ("scratch_p",90,1),("scratch_p",75,2),("scratch_p",50,3),("scratch_p",25,10),("scratch_p",0,0),
+          ("pump_failure_p",90,1),("pump_failure_p",75,2),("pump_failure_p",50,3),("pump_failure_p",25,10),("pump_failure_p",0,0),
+          ("fluid_leak_p",90,1),("fluid_leak_p",75,2),("fluid_leak_p",50,3),("fluid_leak_p",25,10),("fluid_leak_p",0,0),
+          ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",30),
+          ("mechanics",65),
+          ("computers",5),
+      ],
+      "difficulty": 0.9,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 5,
+        "cheap": 4,
+      },
+    },
+    {
+      "id": "sr24_penis_d",
+      "name": "Joystick 3",
+      "description": "Low end penis from Joystick, appearance isn't great but feels pretty good. Some difficulty maintaining erections.",
+      "rate": "D",
+      "xp_mult": {
+        "bot_sex": 0.89,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_penis",
+      "damage_mult": 0.75,
+      "possible_defects": [
+          (None,100,100),(None,0,0),
+          ("scratch_p",75,1),("scratch_p",50,2),("scratch_p",25,10),("scratch_p",0,0),
+          ("pump_failure_p",75,1),("pump_failure_p",50,2),("pump_failure_p",25,10),("pump_failure_p",0,0),
+          ("fluid_leak_p",75,1),("fluid_leak_p",50,2),("fluid_leak_p",25,10),("fluid_leak_p",0,0),
+          ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",30),
+          ("mechanics",65),
+          ("computers",5),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 5,
+        "cheap": 4,
+        "nice": 3,
+      },
+    },
+    {
+      "id": "sr24_penis_c",
+      "name": "Gen-P X9",
+      "description": "Surprisingly good from the low end vendor Genesis. Nothing outstanding but meets all needs and is reliable.",
+      "rate": "C",
+      "xp_mult": {
+        "bot_sex": 1.0,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_penis",
+      "damage_mult": 0.6,
+      "possible_defects": [
+          (None,100,100),(None,0,0),
+          ("scratch_p",65,1),("scratch_p",35,2),("scratch_p",10,3),("scratch_p",0,0),
+          ("pump_failure_p",65,1),("pump_failure_p",35,2),("pump_failure_p",10,3),("pump_failure_p",0,0),
+          ("fluid_leak_p",65,1),("fluid_leak_p",35,2),("fluid_leak_p",10,3),("fluid_leak_p",0,0),
+          ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",30),
+          ("mechanics",65),
+          ("computers",5),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 4,
+        "cheap": 2,
+        "nice": 4,
+        "good": 1,
+      },
+    },
+    {
+      "id": "sr24_penis_b",
+      "name": "Phallus IV",
+      "description": "Phallus is the best and even their low end model is better than most others. Satisfaction all night long!",
+      "rate": "B",
+      "xp_mult": {
+        "bot_sex": 1.17,
+      },
+      "price_mult": 1.00,
+      "slot": "bot_penis",
+      "damage_mult": 0.45,
+      "possible_defects": [
+          (None,100,100),(None,0,0),
+          ("scratch_p",50,1),("scratch_p",25,2),("scratch_p",10,3),("scratch_p",0,0),
+          ("pump_failure_p",50,1),("pump_failure_p",25,2),("pump_failure_p",10,3),("pump_failure_p",0,0),
+          ("fluid_leak_p",50,1),("fluid_leak_p",25,2),("fluid_leak_p",10,3),("fluid_leak_p",0,0),
+          ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",30),
+          ("mechanics",65),
+          ("computers",5),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 4,
+        "nice": 4,
+        "good": 2,
+      },
+    },
+    {
+      "id": "sr24_penis_a",
+      "name": "Joystick 6i",
+      "description": "Top end from Joystick, adjustable size and firmness enables it to satisfy anyone in every way!",
+      "rate": "A",
+      "xp_mult": {
+        "bot_sex": 1.33,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_penis",
+      "damage_mult": 0.27,
+      "possible_defects": [
+          (None,100,100),(None,0,0),
+          ("scratch_p",50,1),("scratch_p",25,2),("scratch_p",10,3),("scratch_p",0,0),
+          ("pump_failure_p",50,1),("pump_failure_p",25,2),("pump_failure_p",10,3),("pump_failure_p",0,0),
+          ("fluid_leak_p",50,1),("fluid_leak_p",25,2),("fluid_leak_p",10,3),("fluid_leak_p",0,0),
+          ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",30),
+          ("mechanics",65),
+          ("computers",5),
+      ],
+      "difficulty": 1.1,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 3,
+        "good": 3,
+        "luxury": 2,
+      },
+    },
+    {
+      "id": "sr24_penis_s",
+      "name": "Phallus X",
+      "description": "Simply the best available, fully customizable for all needs; size, firmness, semen volume, veins, glans, foreskin, you name it!",
+      "rate": "S",
+      "xp_mult": {
+        "bot_sex": 1.5,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_penis",
+      "damage_mult": 0.22,
+
+      "possible_defects": [
+          (None,100,100),(None,0,0),
+          ("scratch_p",25,1),("scratch_p",10,2),("scratch_p",0,0),
+          ("pump_failure_p",25,1),("pump_failure_p",10,2),("pump_failure_p",0,0),
+          ("fluid_leak_p",25,1),("fluid_leak_p",10,2),("fluid_leak_p",0,0),
+          ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+          ("electronics",30),
+          ("mechanics",65),
+          ("computers",5),
+      ],
+      "difficulty": 1.25,
+      "list_target_chances":{},
+      "list_target_tag_chances":{
+        "all": 2,
+        "good": 2,
+        "luxury": 3,
+      },
+    },
+  ],
+
+  "bot_part_defects": [
+    ##  ears - punctured eardrum
+    {
+      "id": "ears_drum",
+      "name": "Punctured eardrum",
+      "description": "The synthetic eardrum is punctured.",
+      "can_apply_multiple": True,
+      "difficulty": 1.5,
+      "part_price_mult": 0.5,
+    },
+    ##  Implants - leaking seal
+    {
+      "id": "implant_shell",
+      "name": "Torn implant shell",
+      "description": "Gel is leaking from a tear in the shell that shapes the implant.",
+      "can_apply_multiple": True,
+      "difficulty": 1.5,
+      "part_price_mult": 0.5,
+    },
+    ##  Penis - scratch, pump failure, fluid leak
+    {
+      "id": "scratch_p",
+      "name": "Scratched Shaft",
+      "description": "Where did this bot put his thing to get a large scratch like that?.",
+      "can_apply_multiple": True,
+      "part_price_mult": 0.5,
+    },
+    {
+      "id": "pump_failure_p",
+      "name": "Pump Failure",
+      "description": "Pump failure, it's not much good with no erections or ejaculations.",
+      "can_apply_multiple": True,
+      "difficulty": 2.0,
+      "part_price_mult": 0.3,
+    },
+    {
+      "id": "fluid_leak_p",
+      "name": "Fluid leak ",
+      "description": "Fluid leak, pump runs constantly trying to maintain an erection.",
+      "can_apply_multiple": False,
+      "difficulty": 2.5,
+      "part_price_mult": 0.5,
+    },
+  ],
+}

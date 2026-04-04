@@ -1,0 +1,16 @@
+﻿## do not edit, changes will be rewritten by game updates
+
+{
+  "mod_id": "base_game_netconsole_entry_points",
+  "mod_description": "Base game content, netconsole entry points.",
+  "mod_priority": -700,
+
+  "dscs_tunings": {
+    "netconsole_entry_points": [
+      "agc_toaster_{hex_rnd8}",
+      "TRX_17_{hex_rnd8}_NAP_REP_{hex_rnd8_2}",
+      "mitsu_charger_v74_{hex_rnd8}",
+      "{hex_rnd8}-{hex_rnd8_2}-{hex_rnd8_3}",
+    ],
+  },
+}

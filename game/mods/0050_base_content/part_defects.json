@@ -1,0 +1,74 @@
+﻿## do not edit, changes will be rewritten by game updates
+
+{
+  "mod_id": "base_game_part_defects",
+  "mod_description": "Base game content, part defects.",
+  "mod_priority": -900,
+
+  "bot_part_defects": [
+    ## special defects ########################################################
+    {
+      "id": "destroyed",
+      "name": "Destroyed",
+      "description": "The part is irreparably damaged.",
+      "part_price_mult": 0.0,
+      "repairable": False,
+      "disabling": True,
+      "destroyed": True,
+    },
+    ## generic parts damage defects ###########################################
+    {
+      "id": "cracked",
+      "name": "Cracked",
+      "description": "The part is cracked.",
+      "can_apply_multiple": True,
+      "part_price_mult": 0.75,
+      "repairable": False,
+    },
+    {
+      "id": "scratch",
+      "name": "Small scratch",
+      "description": "Part is a little scratched.",
+      "can_apply_multiple": True,
+      "part_price_mult": 0.95,
+    },
+    ## eyes-specific defects ##################################################
+    {
+      "id": "lazy_eye",
+      "name": "Lazy eye",
+      "description": "One of eyes' motorics is unsynced with rest of system.",
+      "part_price_mult": 0.50,
+    },
+    ## vocoder-specific defects ###############################################
+    {
+      "id": "membrane_rip",
+      "name": "Membrane rip",
+      "description": "There is a small rip in the vocoder membrane, distorting voice.",
+      "can_apply_multiple": True,
+      "part_price_mult": 0.35,
+    },
+    ## powercore-specific defects #############################################
+    {
+      "id": "isolation_damaged",
+      "name": "Damaged isolation",
+      "description": "Inner isolation layer is damaged, leading to occassional short circuits.",
+      "part_price_mult": 0.25,
+    },
+    ## skin-specific defects ##################################################
+    {
+      "id": "skin_rip",
+      "name": "Small rip",
+      "description": "There is a small rip in the skin layer.",
+      "can_apply_multiple": True,
+      "part_price_mult": 0.85,
+    },
+    {
+      "id": "skin_large_rip",
+      "name": "Large rip",
+      "description": "There is quite a big rip in the skin layer.",
+      "can_apply_multiple": True,
+      "difficulty": 2.0,
+      "part_price_mult": 0.5,
+    },
+  ],
+}

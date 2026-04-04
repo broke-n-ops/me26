@@ -1,0 +1,220 @@
+{
+  "mod_id": "sr24missingparts",
+  "mod_description": "Creates missing parts: parts named to act like missing parts.",
+  "mod_priority": -800,
+
+  "bot_parts":[
+    ##  CPU
+    {
+      "id": "sr24_cpu_missing",
+      "name": "missing CPU",
+      "description": "somebody removed the CPU",
+      "rate": "",
+      "slot": "bot_cpu",
+      "damage_on_remove": "missing",
+      "damage_mult": 999999,
+      "possible_defects": [
+          ("missing_cpu",100,100),("missing_cpu",0,0)
+      ],
+    },
+    ##  Eyes
+    {
+      "id": "sr24_eyes_missing",
+      "name": "missing eyes",
+      "description": "somebody removed the eyes",
+      "rate": "",
+      "slot": "bot_eyes",
+      "damage_on_remove": "missing",
+      "damage_mult": 999999,
+      "possible_defects": [
+          ("missing_eyes",100,100),("missing_eyes",0,0)
+      ],
+    },
+    ##  Ears
+    {
+      "id": "sr24_ears_missing",
+      "name": "missing ears",
+      "description": "somebody removed the ears",
+      "rate": "",
+      "slot": "bot_ears",
+      "damage_on_remove": "missing",
+      "damage_mult": 999999,
+      "possible_defects": [
+          ("missing_ears",100,100),("missing_ears",0,0)
+      ],
+    },
+    ##  Vocodor
+    {
+      "id": "sr24_vocoder_missing",
+      "name": "missing vocoder",
+      "description": "somebody removed the vocoder",
+      "rate": "",
+      "slot": "bot_vocoder",
+      "damage_on_remove": "missing",
+      "damage_mult": 999999,
+      "possible_defects": [
+          ("missing_vocoder",100,100),("missing_vocoder",0,0)
+      ],
+    },
+    ##  Powercore
+    {
+      "id": "sr24_powercore_missing",
+      "name": "missing powercore",
+      "description": "somebody removed the powercore",
+      "rate": "",
+      "slot": "bot_powercore",
+      "damage_on_remove": "missing",
+      "damage_mult": 999999,
+      "possible_defects": [
+          ("missing_powercore",100,100),("missing_powercore",0,0)
+      ],
+    },
+    ##  Arms
+    {
+      "id": "sr24_arms_missing",
+      "name": "missing arms",
+      "description": "somebody removed the arms",
+      "rate": "",
+      "slot": "bot_arms",
+      "damage_on_remove": "missing",
+      "damage_mult": 999999,
+      "possible_defects": [
+          ("missing_arms",100,100),("missing_arms",0,0)
+      ],
+    },
+    ##  Legs
+    {
+      "id": "sr24_legs_missing",
+      "name": "missing legs",
+      "description": "somebody removed the legs",
+      "rate": "",
+      "slot": "bot_legs",
+      "damage_on_remove": "missing",
+      "damage_mult": 999999,
+      "possible_defects": [
+          ("missing_legs",100,100),("missing_legs",0,0)
+      ],
+    },
+    ##  Skin
+    {
+      "id": "sr24_skin_missing",
+      "name": "missing skin",
+      "description": "somebody stripped off the skin",
+      "rate": "",
+      "slot": "bot_skin",
+      "damage_on_remove": "missing",
+      "damage_mult": 999999,
+      "possible_defects": [
+          ("missing_skin",100,100),("missing_skin",0,0)
+      ],
+    },
+    ##  Implants
+    {
+      "id": "sr24_implants_missing",
+      "name": "missing implants",
+      "description": "somebody removed the implants",
+      "rate": "",
+      "slot": "bot_implants",
+      "damage_on_remove": "missing",
+      "damage_mult": 999999,
+      "possible_defects": [
+          ("missing_implants",100,100),("missing_implants",0,0)
+      ],
+    },
+    ##  Vagina
+    {
+      "id": "sr24_vagina_missing",
+      "name": "missing vagina",
+      "description": "somebody removed the vagina",
+      "rate": "",
+      "slot": "bot_vagina",
+      "damage_on_remove": "missing",
+      "damage_mult": 999999,
+      "possible_defects": [
+          ("missing_vagina",100,100),("missing_vagina",0,0)
+      ],
+    },
+    ##  Penis
+    {
+      "id": "sr24_penis_missing",
+      "name": "missing penis",
+      "description": "somebody removed the penis",
+      "rate": "",
+      "slot": "bot_penis",
+      "damage_on_remove": "missing",
+      "damage_mult": 999999,
+      "possible_defects": [
+          ("missing_penis",100,100),("missing_penis",0,0)
+      ],
+    },
+  ],
+
+  "bot_part_defects": [
+    {
+      "id": "missing_cpu",
+      "name": "damaged CPU socket",
+      "description": "The socket was damaged when someone ripped out the CPU.",
+      "can_apply_multiple": False,
+    },
+    {
+      "id": "missing_eyes",
+      "name": "damaged eye sockets",
+      "description": "Both wiring harnesses were damaged when someone ripped out the eyes.",
+      "can_apply_multiple": False,
+    },
+    {
+      "id": "missing_ears",
+      "name": "damaged ear sockets",
+      "description": "Both wiring harnesses were damaged when someone ripped out the ears.",
+      "can_apply_multiple": False,
+    },
+    {
+      "id": "missing_vocoder",
+      "name": "damaged vocoder socket",
+      "description": "The wiring harness was damaged when someone ripped out the vocoder.",
+      "can_apply_multiple": False,
+    },
+    {
+      "id": "missing_powercore",
+      "name": "damaged main wiring harness",
+      "description": "The main wiring harness was damaged when someone ripped out the powercore.",
+      "can_apply_multiple": False,
+    },
+    {
+      "id": "missing_arms",
+      "name": "damaged shoulder sockets",
+      "description": "Both wiring harnesses were damaged when someone ripped off the arms.",
+      "can_apply_multiple": False,
+    },
+    {
+      "id": "missing_legs",
+      "name": "damaged hip sockets",
+      "description": "Both wiring harnesses were damaged when someone ripped off the legs.",
+      "can_apply_multiple": False,
+    },
+    {
+      "id": "missing_skin",
+      "name": "internal parts contaminated",
+      "description": "Everything inside the bot is filthy because the skin was removed.",
+      "can_apply_multiple": False,
+    },
+    {
+      "id": "missing_implants",
+      "name": "internal parts contaminated",
+      "description": "Pieces of the implants came off and got into the internal parts of the bot when someone removed them.",
+      "can_apply_multiple": False,
+    },
+    {
+      "id": "missing_vagina",
+      "name": "damaged genitals socket",
+      "description": "The wiring harness for the genitals was damaged when someone ripped out the vagina.",
+      "can_apply_multiple": False,
+    },
+    {
+      "id": "missing_penis",
+      "name": "damaged genitals socket",
+      "description": "The wiring harness for the genitals was damaged when someone ripped off the penis.",
+      "can_apply_multiple": False,
+    },
+  ],
+}

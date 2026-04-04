@@ -1,0 +1,145 @@
+﻿## do not edit, changes will be rewritten by game updates
+
+{
+  "mod_id": "base_game",
+  "mod_description": "Base game mod template.",
+  "mod_priority": -1000,
+
+  "asset_packs": [
+  ],
+
+  "dscs_tunings": {
+  },
+
+  "name_tables": {
+  },
+
+  "bot_part_defects": [
+    ## full template, do not add as possible defect ###########################
+    {
+      ## this line make game ignore this entry
+      "do_not_register": True,
+      ## basic bot part defect information
+      "id": "bot_part_defect_template",
+      "name": "Defect name",
+      "description": "Defect description, keep it reasonably short.",
+      ## can this defect be rolled/added if already present in part
+      "can_apply_multiple": False,
+      ## how much price changed if defect present, applied for every defect
+      "part_price_mult": 1.0,
+      ## is this defect can be repaired by played?
+      "repairable": True,
+      ## currently_unused
+      "fix_requirements": [],
+      ## how hard it is to repair? increase xp gains from repairing
+      "difficulty": 1.0,
+      ## is this defect will disable part, but not destroy it?
+      "disabling": False,
+      ## is this defect make part irreparably destroyed?
+      "destroyed": False,
+    },
+  ],
+
+  "bot_parts": [
+    ## full template, do not add as possible part #############################
+    {
+      ## this line make game ignore this entry
+      "do_not_register": True,
+      ## basic bot part information
+      "id": "bot_part_template",
+      "name": "Part name",
+      "description": "Part description, keep it reasonably short.",
+      ## how generally good/rare part is, SABCDEF, S - best, F - worst
+      "rate": "F",
+      ## affect price of this specific part, along with category and rate price mults
+      "price_mult": 1.0,
+      ## which category/slot part is using
+      ## "bot_cpu","bot_eyes","bot_vocoder","bot_powercore","bot_arms","bot_legs","bot_skin"
+      "slot": "bot_skin",
+      ## how sturdy/fragile part is, lower - less damage taken
+      "damage_mult": 1.0,
+      ## possible defects triggered when taking damage, list of (defect_id or None,integrity_cap,weight)
+      ## defect will be possible only if part.integrity<=integrity_cap and weight>0
+      ## if more than one of same defects, entry with highest valid integrity_cap is selected
+      "possible_defects": [],
+      ## skills will be used to calculate part/defect repair progress, list of (skill,weight)
+      ## "mechanics","electronics","computers","combat","sex","social"
+      ## values calculated proportionally, total can go over 100
+      "repair_skills": [("mechanics",100)],
+      ## affect repair speed and xp gained when repairing part or defect
+      "difficulty": 1.0,
+      ## chances of this part appearing for specific events, dict of target_event:weight
+      ## 100 - "very often", 1 - "very rare"
+      ## final values calculated proportionally, so 100 is not "always"
+      "list_target_chances": {},
+      ## chances of this part appearing for event with tags, dict of target_tag:weight
+      ## common tags: "all", "cheap", "nice", "good", "luxury"
+      ## 100 - "very often", 1 - "very rare"
+      ## if multiple tags valid, will use largest of applicable weights
+      ## final values calculated proportionally, so 100 is not "always"
+      "list_target_tag_chances": {},
+    },
+  ],
+
+  "bot_models": [
+    ## full template, do not use as possible bot model ########################
+    {
+      ## this line make game ignore this entry
+      "do_not_register": True,
+      ## basic bot model information
+      "model_id": "bot_model_template",
+      "model_name": "Template Bot",
+      "model_description": "Bot model description, keep it reasonably short.",
+      ## names to randomly choose from when generating
+      ## string - use built-in table
+      ## "european_names", "japanese_names"
+      ## list of strings - use these only
+      "name_variants": "european_names",
+      ## affect pronouns and some events
+      ## "male", "female"
+      "gender": "female",
+      "rate": "D",
+      "price_mult": 1.0,
+      ## how fast stability decays with gained xp, higher - faster
+      "psychocore_stability_decay_mult": 1.0,
+      ## how sturdy this model in general, higher - parts degrade faster
+      "part_damage_mult": 1.0,
+      ## traits bot will have by default when generated
+      "default_traits": [
+      ],
+      ## parts bot will have by default when generated
+      ## slots can be any registered slot, but bot should have at least one cpu and powercore-tagged part
+      "default_parts": {
+        "skin": "ecoskin",
+        "cpu": "neurotech4",
+        "eyes": "irida",
+        "vocoder": "invox",
+        "powercore": "nova",
+        "arms": "arms_plastan",
+        "legs": "legs_plastan",
+      },
+      ## chances of this bot appearing for specific events, dict of target_event:weight
+      ## 100 - "very often", 1 - "very rare"
+      ## final values calculated proportionally, so 100 is not "always"
+      "list_target_chances": {
+      },
+      ## chances of this bot appearing for event with tags, dict of target_tag:weight
+      ## common tags: "all", "cheap", "nice", "good", "luxury"
+      ## 100 - "very often", 1 - "very rare"
+      ## if multiple tags valid, will use largest of applicable weights
+      ## final values calculated proportionally, so 100 is not "always"
+      "list_target_tag_chances": {
+        "all": 50,
+        "cheap": 50,
+        "nice": 10,
+      },
+      ## skills given to bot when generated
+      ## "default" - use table supplied by event requesting bot
+      ## list of ("skill_id",(min_xp,max_xp))
+      ## use negative min_xp to make "don't know skill" more probable
+      ## skills: "bot_combat","bot_electronics","bot_mechanics","bot_sex","bot_social"
+      ## it is not necessary to list every skill
+      "generate_bot_mind_table": "default",
+    },
+  ],
+}

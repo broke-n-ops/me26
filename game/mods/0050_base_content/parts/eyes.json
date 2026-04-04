@@ -1,0 +1,72 @@
+﻿## do not edit, changes will be rewritten by game updates
+
+{
+  "mod_id": "base_game_parts_eyes",
+  "mod_description": "Base game content, bot parts, eyes.",
+  "mod_priority": -800,
+
+  "bot_parts": [
+    ## eyes ###################################################################
+    {
+      "id": "ocu7",
+      "name": "OCU/7",
+      "description": "Low-end eyes module, just a visual sensor, no extra functionality.",
+      "rate": "E",
+      "xp_mult": {
+        "bot_mechanics": 0.78,
+        "bot_electronics": 0.78,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_eyes",
+      "damage_mult": 1.1,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("lazy_eye",75,1),("lazy_eye",50,3),("lazy_eye",25,5),("lazy_eye",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("electronics",75),
+        ("mechanics",15),
+        ("computers",10),
+      ],
+      "difficulty": 0.9,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 10,
+        "cheap": 10,
+      },
+    },
+    {
+      "id": "irida",
+      "name": "Irida-XR",
+      "description": "Widely used eyes module, with selection of preprogrammed colors and patterns.",
+      "rate": "D",
+      "xp_mult": {
+        "bot_mechanics": 0.89,
+        "bot_electronics": 0.89,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_eyes",
+      "damage_mult": 1.0,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("lazy_eye",50,1),("lazy_eye",25,3),("lazy_eye",10,5),("lazy_eye",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("electronics",75),
+        ("mechanics",15),
+        ("computers",10),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 10,
+        "cheap": 8,
+        "nice": 10,
+      },
+    },
+  ],
+}

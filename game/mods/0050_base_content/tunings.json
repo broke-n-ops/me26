@@ -1,0 +1,97 @@
+﻿## do not edit, changes will be rewritten by game updates
+
+{
+  "mod_id": "base_game_tunings",
+  "mod_description": "Base game tuning constants.",
+  "mod_priority": -950,
+
+  "dscs_tunings": {
+    "system_mods_priority_threshold": -100,
+
+    "easy_difficulty_char_points": 88,
+    "easy_difficulty_debt": (300000,500000),
+    "easy_difficulty_debt_payments": (1000,2000,3000,5000,10000,15000,25000),
+    "easy_difficulty_mc_xp_rate": {
+      "combat": 1.5,
+      "mechanics": 1.5,
+      "electronics": 1.5,
+      "computers": 1.5,
+      "sex": 1.5,
+      "social": 1.5,
+      "mood": "0.5 if xp<0 else 2.0",
+    },
+    "easy_difficulty_bots_xp_rate": {
+      "bot_combat": 2.0,
+      "bot_mechanics": 2.0,
+      "bot_electronics": 2.0,
+      "bot_sex": 2.0,
+      "bot_social": 2.0,
+      "autonomy": 1.0,
+    },
+    "easy_difficulty_hardcore_mode": False,
+
+    "normal_difficulty_char_points": 50,
+    "normal_difficulty_debt": (600000,800000),
+    "normal_difficulty_debt_payments": (1000,2000,3000,5000,10000,15000,25000,35000,50000),
+    "normal_difficulty_mc_xp_rate": {
+      "combat": 1.0,
+      "mechanics": 1.0,
+      "electronics": 1.0,
+      "computers": 1.0,
+      "sex": 1.0,
+      "social": 1.0,
+    },
+    "normal_difficulty_bots_xp_rate": {
+      "bot_combat": 1.5,
+      "bot_mechanics": 1.5,
+      "bot_electronics": 1.5,
+      "bot_sex": 1.5,
+      "bot_social": 1.5,
+      "autonomy": 1.0,
+    },
+    "normal_difficulty_hardcore_mode": False,
+
+    "hard_difficulty_char_points": 25,
+    "hard_difficulty_debt": (1200000,1600000),
+    "hard_difficulty_debt_payments": (1000,2000,3000,5000,10000,15000,25000,35000,50000,75000),
+    "hard_difficulty_mc_xp_rate": {
+      "combat": 0.75,
+      "mechanics": 0.75,
+      "electronics": 0.75,
+      "computers": 0.75,
+      "sex": 0.75,
+      "social": 0.75,
+    },
+    "hard_difficulty_bots_xp_rate": {
+      "bot_combat": 1.0,
+      "bot_mechanics": 1.0,
+      "bot_electronics": 1.0,
+      "bot_sex": 1.0,
+      "bot_social": 1.0,
+      "autonomy": 1.0,
+    },
+    "hard_difficulty_hardcore_mode": False,
+
+    "hardcore_difficulty_char_points": 10,
+    "hardcore_difficulty_debt": (2000000,3000000),
+    "hardcore_difficulty_debt_payments": (1000,2000,3000,5000,10000,15000,25000,35000,50000,75000,100000),
+    "hardcore_difficulty_mc_xp_rate": {
+      "combat": 0.5,
+      "mechanics": 0.5,
+      "electronics": 0.5,
+      "computers": 0.5,
+      "sex": 0.5,
+      "social": 0.5,
+      "mood": "2.0 if xp<0 else 0.5",
+    },
+    "hardcore_difficulty_bots_xp_rate": {
+      "bot_combat": 0.75,
+      "bot_mechanics": 0.75,
+      "bot_electronics": 0.75,
+      "bot_sex": 0.75,
+      "bot_social": 0.75,
+      "autonomy": 0.75,
+    },
+    "hardcore_difficulty_hardcore_mode": True,
+  },
+}

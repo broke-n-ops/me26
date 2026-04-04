@@ -1,0 +1,57 @@
+﻿{
+  "mod_id": "squirrel_part_slots",
+  "mod_description": "squirrel content, part slots.",
+  "mod_priority": -900,
+
+  "bot_part_slots": [
+    {
+      "id": "bot_vagina",
+      "name": "Vagina",
+      "list_priority": -2,
+      "category_price_mult": 4,
+      "slot_tags": [],
+      "beauty_weight": 25,
+      "event_damage": {
+         "training_sex": 50,
+         "mission": 50
+      },
+    },
+    {
+      "id": "bot_penis",
+      "name": "Penis",
+      "list_priority": -1,
+      "category_price_mult": 4.5,
+      "slot_tags": [],
+      "beauty_weight": 25,
+      "event_damage": {
+         "training_sex": 50,
+         "mission": 50
+      },
+    },
+    {
+      "id": "bot_ears",
+      "name": "Ears",
+      "list_priority": -9,
+      "category_price_mult": 2,
+      "slot_tags": [],
+      "beauty_weight": 15,
+      "event_damage": {
+        "training_combat": 5,
+        "mission": 10,
+      },
+    },
+    {
+      "id": "bot_implants",
+      "name": "Implants",
+      "list_priority": -3,
+      "category_price_mult": 2.4,
+      "slot_tags": [],
+      "beauty_weight": 100,
+      "event_damage": {
+        "training_combat": 80,
+        "training_sex": 80,
+        "mission": 80,
+      },
+    },
+  ],
+}

@@ -1,0 +1,109 @@
+﻿## do not edit, changes will be rewritten by game updates
+
+{
+  "mod_id": "base_game_parts_arms",
+  "mod_description": "Base game content, bot parts, arms.",
+  "mod_priority": -800,
+
+  "bot_parts": [
+    ## arms ###################################################################
+    {
+      "id": "arms_plastic",
+      "name": "Plastic arms",
+      "description": "3D-printed, junk-grade arms made of cheap, fragile plastic.",
+      "rate": "F",
+      "xp_mult": {
+        "bot_combat": 0.67,
+        "bot_mechanics": 0.67,
+        "bot_electronics": 0.67,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_arms",
+      "damage_mult": 2.0,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("scratch",90,1),("scratch",75,2),("scratch",50,3),("scratch",25,10),("scratch",0,0),
+        ("cracked",75,1),("cracked",50,3),("cracked",30,5),("cracked",10,15),("cracked",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("mechanics",60),
+        ("electronics",30),
+        ("computers",10),
+      ],
+      "difficulty": 0.75,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 6,
+        "cheap": 8,
+      },
+    },
+    {
+      "id": "arms_plastan",
+      "name": "Plastan arms",
+      "description": "Common plastan alloy arms by OEM manufacturer.",
+      "rate": "E",
+      "xp_mult": {
+        "bot_combat": 0.78,
+        "bot_mechanics": 0.78,
+        "bot_electronics": 0.78,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_arms",
+      "damage_mult": 1.5,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("scratch",75,1),("scratch",50,2),("scratch",25,3),("scratch",10,10),("scratch",0,0),
+        ("cracked",50,1),("cracked",30,3),("cracked",10,5),("cracked",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("mechanics",60),
+        ("electronics",30),
+        ("computers",10)
+      ],
+      "difficulty": 0.9,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 8,
+        "cheap": 10,
+      },
+    },
+    {
+      "id": "arms_composite",
+      "name": "Composite arms",
+      "description": "Entry level bot arms by Mitsutachi Corp, made of proprietary composite materials.",
+      "rate": "C",
+      "xp_mult": {
+        "bot_combat": 1.00,
+        "bot_mechanics": 1.00,
+        "bot_electronics": 1.00,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_arms",
+      "damage_mult": 0.8,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("scratch",50,1),("scratch",25,2),("scratch",10,3),("scratch",5,5),("scratch",0,0),
+        ("cracked",20,1),("cracked",10,3),("cracked",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("mechanics",60),
+        ("electronics",30),
+        ("computers",10)
+      ],
+      "difficulty": 1.0,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 6,
+        "cheap": 2,
+        "nice": 5,
+        "good": 1,
+      },
+    },
+  ],
+}

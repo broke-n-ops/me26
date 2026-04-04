@@ -1,0 +1,78 @@
+##========Random Events========
+
+init python:
+  train_combat_bot=[]              ##  need to store bot to enable multiple functions to use it
+
+init python hide:
+  @random_event("train_combat")
+  def train_combat_none():         ##  this is the chance of 'no event'
+    return None,75
+
+  @random_event("train_combat")
+  def train_combat_psychocore():
+    return "train_combat_stability_check",25
+##    return "train_combat_stability_check",9999  ##  replace the line above with this line during testing
+
+##========Supporting Functions========
+
+label train_combat_stability_check():
+  $train_combat_bot=bot
+  $trigger_event=randint(1,74)          ##  trigger value always below minimum stable bot value
+
+##  $trigger_event=99                               ##  these 4 lines are for testing only
+##  ""
+##  "trigger_event: [trigger_event]"
+##  "bot.psychocore.stability: [bot.psychocore.stability]"
+  
+  if bot.psychocore.stability<=trigger_event:
+    choice("train_combat_stability_event") "Continue"
+  else:
+
+##  Below is an exact copy of what normally happens at the end of 'train_combat'
+    if show_repeat_action():
+      if bot.chassis.is_disabled:
+        interact(None,hint="{hint}bot is disabled{/}") "Repeat"
+      else:
+        interact("^train_combat") "Repeat"
+      choice("<<<") "Back"
+    else:
+      choice("<<<") "Continue"
+    choice("end_bot_interaction",pos=16,key="home") "Done"
+    choice("<<<",pos=17,key="cancel") "Back"
+  return
+
+label train_combat_stability_event():
+  header "[train_combat_bot] - Training: Combat"
+  if mc.energy>0:
+    "Unfortunately {mark}[train_combat_bot]{/} wasn't stable and went a little crazy during training. You wasted time and suffered minor injuries getting [train_combat_bot.himher] back under control. In addition, [train_combat_bot.heshe] lost a little of [train_combat_bot.hisher] combat skill."
+    ""
+    "You should probably stabilize [train_combat_bot.himher] before giving [train_combat_bot.himher] any more training."
+    ""
+    $mc.energy-=1
+    "{bad} Lost 1 AP!{/}"
+    $mc.give_xp("strength",randint(-300,-200))
+    $mc.give_xp("stamina",randint(-300,-200))
+    $train_combat_bot.give_xp("bot_combat",randint(-25,-2))
+    $mc.mood.give_xp(randint(-100,-50))
+  else:
+    "Unfortunately {mark}[train_combat_bot]{/} wasn't stable and went a little crazy during training. You were a little tired when training started so you suffered significant injuries getting [train_combat_bot.himher] back under control and [train_combat_bot.heshe] lost a significant portion of [train_combat_bot.hisher] combat skill."
+    ""
+    "You should probably stabilize [train_combat_bot.himher] before giving [train_combat_bot.himher] any more training."
+    ""
+    $mc.give_xp("strength",randint(-1000,-500))
+    $mc.give_xp("stamina",randint(-1000,-500))
+    $train_combat_bot.give_xp("bot_combat",randint(-49,-26))
+    $mc.mood.give_xp(randint(-200,-100))
+##  Below is an exact copy of what normally happens at the end of 'train_combat'
+  $bot=train_combat_bot
+  if show_repeat_action():
+    if bot.chassis.is_disabled:
+      interact(None,hint="{hint}bot is disabled{/}") "Repeat"
+    else:
+      interact("^train_combat") "Repeat"
+    choice("<<<") "Back"
+  else:
+    choice("<<<") "Continue"
+  choice("end_bot_interaction",pos=16,key="home") "Done"
+  choice("<<<",pos=17,key="cancel") "Back"
+  return

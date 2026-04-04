@@ -1,0 +1,236 @@
+﻿{
+  "mod_id": "base_game_bot_models",
+  "mod_description": "Original bot models from DSCS.",
+  "mod_priority": -700,
+
+  "asset_packs": [
+  ],
+
+  "bot_models": [
+    ## AGMX-9 #################################################################
+    {
+      "model_id": "agmx_9",
+      "model_name": "AGMX-9",
+      "model_description": "Popular model by RheinGerate.\n\nPleasing exterior and good processor allows for wide range of roles.",
+      "model_tags": [],
+      "name_variants": "european_names",
+      "gender": "female",
+      "rate": "C",
+      "xp_mult": {
+        "bot_combat": 1,
+        "bot_electronics": 0.8,
+        "bot_mechanics": 0.8,
+        "bot_sex": 0.9,
+        "bot_social": 0.8,
+      },
+      "price_mult": 0.9125,
+      "psychocore_stability_decay_mult": 1.0,
+      "part_damage_mult": 1.0,
+      "default_traits": [
+      ],
+      "default_parts": {
+        "skin": "sr24_skin_c",
+        "cpu": "neurotech4",
+        "eyes": "sr24_eyes_c",
+        "vocoder": "sr24_vocoder_c",
+        "powercore": "zeux5",
+        "arms": "arms_composite",
+        "legs": "legs_composite",
+        "vagina": "sr24_vagina_c",
+        "ears": "sr24_ears_c",
+        "implants": "sr24_implants_c",
+      },
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 20,
+        "cheap": 10,
+        "nice": 25,
+        "good": 5,
+      },
+      "generate_bot_mind_table": "default",
+    },
+    ## AGRX-10 ################################################################
+    {
+      "model_id": "agrx_10",
+      "model_name": "AGRX-10",
+      "model_description": "Recent model by RheinGerate well received by BDSM connoisseurs.\n\nSturdy chassis, reinforced EcoSkin layer, robust SynFluid generator, and stable PsychoCore.\n\nThough low-end processor unit makes this model unfit for sophisticated or multiple roles.",
+      "model_tags": [],
+      "name_variants": "european_names",
+      "gender": "female",
+      "rate": "D",
+      "xp_mult": {
+        "bot_combat": 0.85,
+        "bot_electronics": 0.75,
+        "bot_mechanics": 0.75,
+        "bot_sex": 1,
+        "bot_social": 1,
+      },
+      "price_mult": 1.0451,
+      "psychocore_stability_decay_mult": 0.5,
+      "part_damage_mult": 0.5,
+      "default_traits": [
+      ],
+      "default_parts": {
+        "skin": "hardskin",
+        "cpu": "sr24_cpu_d",
+        "eyes": "irida",
+        "vocoder": "invox",
+        "powercore": "nova",
+        "arms": "sr24_arms_d",
+        "legs": "sr24_legs_d",
+        "vagina": "sr24_vagina_d",
+        "ears": "sr24_ears_d",
+        "implants": "sr24_implants_d",
+      },
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 30,
+        "cheap": 40,
+        "nice": 10,
+      },
+      "generate_bot_mind_table": "default",
+    },
+    ## AGp-Val ################################################################
+    {
+      "model_id": "agptech",
+      "model_name": "AGp-Val",
+      "model_description": "Specialty model by RheinGerate.\n\nPsychoCore was carefully tailored for technical roles without compromises in other areas.",
+      "model_tags": [],
+      "name_variants": "european_names",
+      "gender": "female",
+      "rate": "D",
+      "xp_mult": {
+        "bot_combat": 0.9,
+        "bot_electronics": 1.05,
+        "bot_mechanics": 1.05,
+        "bot_sex": 1,
+        "bot_social": 1,
+      },
+      "price_mult": 1.1039,
+      "psychocore_stability_decay_mult": 1.0,
+      "part_damage_mult": 1.0,
+      "default_traits": [
+        "tech_smart_inherent",
+      ],
+      "default_parts": {
+        "skin": "hardskin",
+        "cpu": "sr24_cpu_d",
+        "eyes": "irida",
+        "vocoder": "invox",
+        "powercore": "nova",
+        "arms": "sr24_arms_d",
+        "legs": "sr24_legs_d",
+        "vagina": "sr24_vagina_d",
+        "ears": "sr24_ears_d",
+        "implants": "sr24_implants_d",
+      },
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 10,
+        "cheap": 5,
+        "nice": 10,
+      },
+      "generate_bot_mind_table": [
+        ["bot_combat",(0,0)],              ## was 0,0
+        ["bot_electronics",(-5000,60000)], ## was 0,75000 replace - 60000 as a test
+        ["bot_mechanics",(-5000,60000)],   ## was 0,75000 replace - 60000 as a test
+        ["bot_sex",(-15000,7500)],         ## was -15000, 7500
+        ["bot_social",(-15000,7500)],      ## was -15000, 7500
+      ],
+    },
+    ## Akira v3 ###############################################################
+    {
+      "model_id": "akira",
+      "model_name": "Akira v3",
+      "model_description": "Popular model by Mitsutachi Corp.\n\nGood price and nice default setup make this model one of best sellers.",
+      "model_tags": [],
+      "name_variants": "japanese_names",
+      "gender": "female",
+      "rate": "C",
+      "xp_mult": {
+        "bot_combat": 0.8,
+        "bot_electronics": 0.8,
+        "bot_mechanics": 0.8,
+        "bot_sex": 1,
+        "bot_social": 1,
+      },
+      "price_mult": 0.9505,
+      "psychocore_stability_decay_mult": 1.0,
+      "part_damage_mult": 0.75,
+      "default_traits": [
+      ],
+      "default_parts": {
+        "skin": "sr24_skin_c",
+        "cpu": "neurotech4",
+        "eyes": "sr24_eyes_c",
+        "vocoder": "sr24_vocoder_c",
+        "powercore": "zeux5",
+        "arms": "arms_composite",
+        "legs": "legs_composite",
+        "vagina": "sr24_vagina_c",
+        "ears": "sr24_ears_c",
+        "implants": "sr24_implants_c",
+      },
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 15,
+        "nice": 15,
+        "good": 10,
+      },
+      "generate_bot_mind_table": "default",
+    },
+    ## JKB-12 #################################################################
+    {
+      "model_id": "jkb_12",
+      "model_name": "JKB-12",
+      "model_description": "One of the mid/high-end models by Mitsutachi Corp.\n\nA good selection of default parts, complimented by custom sex-focused PsychoCore makes this model a nice addition to any bot harem.",
+      "model_tags": [],
+      "name_variants": "japanese_names",
+      "gender": "female",
+      "rate": "B",
+      "xp_mult": {
+        "bot_combat": 0.85,
+        "bot_electronics": 0.7,
+        "bot_mechanics": 0.7,
+        "bot_sex": 1.05,
+        "bot_social": 1.1,
+      },
+      "price_mult": 1.0589,
+      "psychocore_stability_decay_mult": 1.0,
+      "part_damage_mult": 0.75,
+      "default_traits": [
+        "sex_smart_inherent",
+      ],
+      "default_parts": {
+        "skin": "sr24_skin_b",
+        "cpu": "sr24_cpu_b",
+        "eyes": "sr24_eyes_b",
+        "vocoder": "aria",
+        "powercore": "sr24_powercore_b",
+        "arms": "sr24_arms_b",
+        "legs": "sr24_legs_b",
+        "vagina": "sr24_vagina_b",
+        "ears": "sr24_ears_b",
+        "implants": "sr24_implants_b",
+      },
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 10,
+        "good": 10,
+        "luxury": 6,
+      },
+      "generate_bot_mind_table": [
+        ["bot_combat",(-80000,10000)],      ## was -100000,5000
+        ["bot_electronics",(-80000,10000)], ## was -100000,5000
+        ["bot_mechanics",(-80000,10000)],   ## was -100000,5000
+        ["bot_sex",(-40000,60000)],         ## was -25000,75000
+        ["bot_social",(-28000,42000)],      ## was -50000,75000
+      ],
+    },
+  ],
+}

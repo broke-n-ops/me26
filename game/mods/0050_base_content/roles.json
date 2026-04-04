@@ -1,0 +1,223 @@
+﻿## do not edit, changes will be rewritten by game updates
+
+{
+  "mod_id": "base_game_roles",
+  "mod_description": "Base game content, roles.",
+  "mod_priority": -900,
+
+  "dscs_role_tags": [
+    {
+      "id": "bedroom_toy",
+      "description": "{good}This is what sexbots are for!{/}\nHave one or more join you in bed at night! Will improve your mood during sleep. Used skill: Sex.",
+      "list_priority": 1,
+    },
+    {
+      "id": "clerk",
+      "description": "Will handle simple transactions in the shop giving you more time to work on bots. Will increase money, xp, and event chance when working. Used skill: Social.",
+      "list_priority": 3,
+    },
+    {
+      "id": "techie",
+      "description": "Will help you fix defects and repair parts in the shop except when you're fixing [bot.himher]. Used skills: Mechanics, Electronics.",
+      "list_priority": 4,
+    },
+    {
+      "id": "shopkeeper",
+      "description": "Will sell parts when you have other things to do. Will increase money. Used skills: Mechanics, Electronics, Social.\n\n{good}Shopkeepers are multitasking: Salesperson, Clerk, and Techie{/}.",
+      "list_priority": 7,
+    },
+    {
+      "id": "housekeeper",
+      "description": "Does all those time consuming and boring things you don't like to do! Will clean and maintain your home and shop giving you more time to do other things (increases AP each turn). Used skill: Social.",
+      "list_priority": 2,
+    },
+    {
+      "id": "master_techie",
+      "description": "\n{good}Important! Master Techies must have at least 90% chassis integrity and have a stable psychocore to perform their role.{/}\nWill repair damage and fix defects on other bots by themselves. You'll have more time to do other things! Used skills: Mechanics, Electronics.",
+      "list_priority": 6,
+    },
+    {
+      "id": "mission_manager",
+      "description": "\n{good}Important! 1) Bot Managers must have 90% chassis integrity and have a stable psychocore to perform their role. 2) Bot Managers will not send other bots on missions unless their 'Manage' setting is 'On'{/}.\nBot Managers send other bots on missions based upon their priority setting: {mark}Highest Skill (default), Whore/Gigolo, Scavenge, or UFC Fight{/}. Used skill: Social.",
+      "list_priority": 8,
+    },
+    {
+      "id": "senior_techie",
+      "description": "\n{good}Important! Senior Techies must have at least 90% chassis integrity and have a stable psychocore to perform their role.{/}\nWill fix defects and repair parts in inventory independently. You'll have more time to do other things! Used skills: Mechanics, Electronics.",
+      "list_priority": 5,
+    },
+    {
+      "id": "bot_trainer",
+	  "description": "\n{good}Important! 1) Bot Trainers must have a trainer skill subject selected, at least 90% chassis integrity, and have a stable psychocore to perform their role. 2) The trainer and trainee must have the same skill subject.{/}\nWill train other bots in a specific skill if they have greater skill than the trainee bot. You'll have more time to do other things! Used skills: Specific Skill, Social.",
+      "list_priority": 9,
+    },
+  ],
+
+  "dscs_roles": [
+    {
+      "id": "bedroom_toy",
+      "name": "Bedroom Toy",
+      "list_priority": 1,
+      "description": "Provides you with sexual relief and general warmth.",
+      "requirements": [
+        ("bot.gender=='female'","{mark}Bot {/} is {mark}female{/}"),
+        ("bot.bot_sex>='E'","{mark}Sex{/} at {mark}E+{/}"),
+      ],
+      "role_tags": {
+        "bedroom_toy": 1,
+      },
+    },
+    {
+      "id": "clerk",
+      "name": "Clerk",
+      "list_priority": 3,
+      "description": "Helps you with clients and handle minor financial and business issues.",
+      "requirements": [
+        ("bot.bot_social>='E'","{mark}Social{/} at {mark}E+{/}"),
+      ],
+      "role_tags": {
+        "clerk": 1,
+      },
+    },
+    {
+      "id": "techie",
+      "name": "Techie",
+      "list_priority": 4,
+      "description": "Helps you with bot repairs and workshop upgrades.",
+      "requirements": [
+        ("bot.bot_mechanics>='E'","{mark}Mechanics{/} at {mark}E+{/}"),
+        ("bot.bot_electronics>='E'","{mark}Electronics{/} at {mark}E+{/}"),
+      ],
+      "role_tags": {
+        "techie": 1,
+      },
+    },
+    {
+      "id": "shopkeeper",
+      "name": "Shopkeeper",
+      "list_priority": 7,
+      "description": "Helps you with clients and repairs. Able to autonomously operate shop, handling sales and minor repairs.",
+      "requirements": [
+        ("bot.bot_social>='C'","{mark}Social{/} at {mark}C+{/}"),
+        ("bot.bot_mechanics>='C'","{mark}Mechanics{/} at {mark}C+{/}"),
+        ("bot.bot_electronics>='C'","{mark}Electronics{/} at {mark}C+{/}"),
+      ],
+      "role_tags": {
+        "clerk": 1.5,
+        "techie": 1.5,
+        "shopkeeper": 1,
+      },
+    },
+    {
+      "id": "housekeeper",
+      "name": "House Keeper",
+      "list_priority": 2,
+      "description": "Takes care of your home and shop.",
+      "requirements": [
+        ("bot.bot_social>='C'","{mark}Social{/} at {mark}C+{/}"),
+      ],
+      "role_tags": {
+        "housekeeper": 1,
+      },
+    },
+    {
+      "id": "master_techie",
+      "name": "Master Techie",
+      "list_priority": 6,
+      "description": "Repairs other bots autonomously.",
+      "requirements": [
+        ("bot.bot_mechanics>='B'","{mark}Mechanics{/} at {mark}B+{/}"),
+        ("bot.bot_electronics>='B'","{mark}Electronics{/} at {mark}B+{/}"),
+      ],
+      "role_tags": {
+        "master_techie": 1,
+      },
+    },
+    {
+      "id": "mission_manager",
+      "name": "Bot Manager",
+      "list_priority": 8,
+      "description": "Sends your active bots in capsules on routine missions.",
+      "requirements": [
+        ("bot.bot_social>='A'","{mark}Social{/} at {mark}A+{/}"),
+      ],
+      "role_tags": {
+        "mission_manager": 1,
+      },
+    },
+    {
+      "id": "senior_techie",
+      "name": "Senior Techie",
+      "list_priority": 5,
+      "description": "Repairs parts autonomously.",
+      "requirements": [
+        ("bot.bot_mechanics>='B'","{mark}Mechanics{/} at {mark}B+{/}"),
+        ("bot.bot_electronics>='B'","{mark}Electronics{/} at {mark}B+{/}"),
+      ],
+      "role_tags": {
+        "senior_techie": 1,
+      },
+    },
+    {
+      "id": "bot_trainer",
+      "name": "Bot Trainer",
+      "list_priority": 9,
+      "description": "Trains other bots autonomously.",
+      "requirements": [
+        ("bot.bot_social>='A'","{mark}Social{/} at {mark}A+{/}"),
+      ],
+      "role_tags": {
+        "bot_trainer": 1,
+      },
+    },
+
+    {
+      "id": "repair_order",
+      "list_priority": 99,
+      "name": "$'Repair order' if not bot or bot.chassis.is_disabled else 'Repair order (ready)'",
+##      "list_priority": 4,
+      "description": "A client asked you to repair this bot. Time needed and final state isn't really important, as long as the bot is functional.",
+      "selectable": False,
+      "allowed_actions": [
+        "tinker",
+        "replace_part",
+      ],
+      "interact_actions": [
+        ("bot.chassis.is_disabled","cancel_repair_order",{"title": "Cancel Order"}),
+        ("not bot.chassis.is_disabled","deliver_repair_order",{"title": "Deliver Order"}),
+      ],
+    },
+    {
+      "id": "repair_patrol_bot",
+      "list_priority": 98,
+      "name": "Patrol Bot to Repair",
+##      "list_priority": 3,
+      "description": "This bot is in the {mark}Neighborhood Patrol{/} and was damaged protecting your neighborhood. You must repair it to {mark}100% integrity{/} and it must have {mark}B+ level parts{/}.",
+      "selectable": False,
+      "allowed_actions": [
+        "tinker",
+        "replace_part",
+        "hack",
+      ],
+      "interact_actions": [
+        ("bot.chassis.integrity<100",None,{"title": "Return Patrol Bot"}),
+        ("bot.chassis.integrity==100","return_patrol_bot",{"title": "Return Patrol Bot"}),
+      ],
+    },
+    {
+      "id": "bp_special_bot",
+      "list_priority": 97,
+      "name": "Business Partner Special Bot",
+##      "list_priority": 2,
+      "description": "This bot was provided by {mark}[ns_teacher_name]{/} and is intended for a specific customer. It cannot be sold in any other way.",
+      "selectable": False,
+      "allowed_actions": [
+        "train",
+        "tinker",
+        "replace_part",
+        "hack",
+        "remove_quirk",
+      ],
+    },
+ ],
+}

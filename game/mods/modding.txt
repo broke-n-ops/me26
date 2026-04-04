@@ -1,0 +1,53 @@
+﻿--- SECURITY WARNING ---------------------------------------------------------
+
+While modding system done in a way to avoid unwanted code executions there are always way or two.
+Also using RenPy-based game saves from internet may result unwanted code execution.
+It is recommended to play indie games, especially pirated ones inside some sort of sandbox without internet access.
+As a good example of such sandboxes: https://www.virtualbox.org
+
+Stay safe.
+
+-------------------------------------------------------------------------------
+
+Game treats zip archives in game folders as game archives.
+
+Game loads all json files it can find, from game folders and archives.
+Any json file with "mod_id" entry present is loaded as mod.
+
+Game uses somewhat relaxed json format, allowing trailing commas, None/True/False values and tuples.
+Internally game uses eval_literal-like loader, so no code is executed when loading json.
+Still some entries may be evaluated in run-time, see security warning on top of file.
+
+Mod's entries loaded in order based on "mod_priority". If "mod_priority" not found, it is default to 0.
+If mod with higher priority have entry with same id as mod with lower priority, higher priority one is used.
+
+Game tunings are updated on per entry basis, allowing you to update one or just few entries by your mod.
+
+You can remove previously loaded entries by using id starting with -, with rest of id being filter string.
+For example "bot_parts": [{"id": "-plastic*"}] will remove platic legs and arms from game.
+Having "bot_parts": [{"id": "-*"}] will remove all previously loaded parts.
+This works for bot models, parts, defects and roles.
+
+--- Assets --------------------------------------------------------------------
+
+Game look for any image, movie and audio in game folders and archives.
+Anything found inside "assets" folders will be automatically loaded and registered.
+When autoloading game stripts assets, images, movies, audio, characters, locations folder parts.
+For example, "my_mod/assets/images/bots/my_bot/avatar.webp" will be registered as "bots my_bot avatar" image.
+
+If replacing/adding movies, best option is webm.
+Also game require preview image, same size as movie file, named "<movie>_preview.<ext>":
+  bots akira sex1.webm
+  bots akira sex1_preview.webp
+Normally preview image is first frame of movie to avoid visual glitches.
+When converting movie to webp with ffmpeg, it is better to do webm->png->webp.
+
+It is recommended to remove audio channel from movies, but not necessary as movies are played on muted mixer.
+
+Formats supported/recommended:
+- video: webm, mp4, mkv, avi
+- images: png, jpg, webp
+- audio: mp3, ogg, opus, flac
+Supported video codecs: https://www.renpy.org/doc/html/movie.html
+
+For mod examples see 0050_base_content.zip

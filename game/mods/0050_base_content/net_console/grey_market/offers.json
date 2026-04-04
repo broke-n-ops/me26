@@ -1,0 +1,544 @@
+﻿{
+  "mod_id": "base_game_grey_market_bbs_offers",
+  "mod_description": "Real Grey Market BBS offers; new in SR24 and from DSCS.",
+  "mod_priority": -600,
+  "grey_market_offers": [
+    {
+      "id": "buying_cpu_today",
+      "title": "I went a little overboard overclocking my favorite bot  :(  I need a new bot {mark}CPU{/} ASAP! Maybe I need a better cooling system.",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "part",
+        "slot": "cpu",
+        "rate": "EDCB",
+        "minimal_integrity": 75,
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(4900,10*int((request_price*6.15+1)/10))",  ## was flat 5.0 for all part types, using part bias developed for Ray's online but NOT markup
+      },
+    },
+    {
+      "id": "buying_eyes_today",
+      "title": "You know what mom always said' {say}You'll poke your eye out!{/} Well she was right, I need a working pair of bot {mark}eyes{/}. Next time I'll listen to Mom!",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "part",
+        "slot": "eyes",
+        "rate": "EDCB",
+        "minimal_integrity": 75,
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(2400,10*int((request_price*3.00+1)/10))",
+      },
+    },
+    {
+      "id": "buying_vocoder_today",
+      "title": "Suddenly this morning I can't understand a thing my bot says, anyone got a decent {mark}vocoder{/} I can buy today?",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "part",
+        "slot": "vocoder",
+        "rate": "EDCB",
+        "minimal_integrity": 75,
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(2200,10*int((request_price*2.85+1)/10))",
+      },
+    },
+    {
+      "id": "buying_powercore_today",
+      "title": "There was a loud pop, a blinding light, and a lot of smoke.  :(  Anyone have a working {mark}powercore{/} that I can afford today?",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "part",
+        "slot": "powercore",
+        "rate": "EDCB",
+        "minimal_integrity": 75,
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(4000,10*int((request_price*5.10+1)/10))",
+      },
+    },
+    {
+      "id": "buying_arms_today",
+      "title": "Was entertaining myself making my bots arm wrestle each other and one of them lost big time. Looking for some replacement {mark}arms{/} at the right price.",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "part",
+        "slot": "arms",
+        "rate": "EDCB",
+        "minimal_integrity": 75,
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(2700,10*int((request_price*3.38+1)/10))",
+      },
+    },
+    {
+      "id": "buying_legs_today",
+      "title": "Some fucker hit my errand boy with a car! Need decent bot {mark}legs{/} in working condition ASAP!",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "part",
+        "slot": "legs",
+        "rate": "EDCB",
+        "minimal_integrity": 75,
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(2500,10*int((request_price*3.15+1)/10))",
+      },
+    },
+    {
+      "id": "buying_skin_today",
+      "title": "There was a little fire last night, maybe I should quit smoking. My bot suffered a lot of damage, anyone have a replacement {mark}skin{/} so I can fix her up?",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "part",
+        "slot": "skin",
+        "rate": "EDCB",
+        "minimal_integrity": 75,
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(2400,10*int((request_price*3.08+1)/10))",
+      },
+    },
+    {
+      "id": "buying_vagina_today",
+      "title": "Had a little too much to drink last night and started experimenting on my bot with the empty bottle. I need a replacement {mark}vagina{/} desperately!",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "part",
+        "slot": "vagina",
+        "rate": "EDCB",
+        "minimal_integrity": 75,
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(2600,10*int((request_price*3.30+1)/10))",
+      },
+    },
+    {
+      "id": "buying_implants_today",
+      "title": "Squeezed and pinched my bot way too hard yesterday, it sure was fun but she doesn't look so good any more. I need new {mark}implants{/} to restore her curves!",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "part",
+        "slot": "implants",
+        "rate": "EDCB",
+        "minimal_integrity": 75,
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(2300,10*int((request_price*2.93+1)/10))",
+      },
+    },
+    {
+      "id": "buying_ears_today",
+      "title": "My bot had to chase away some fools with fire crackers and she doesn't respond to my voice any more. Assholes! Anyone have {mark}ears{/} I can buy to fix her up?",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "part",
+        "slot": "ears",
+        "rate": "EDCB",
+        "minimal_integrity": 75,
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(2100,10*int((request_price*2.70+1)/10))",
+      },
+    },
+    {
+      "id": "buying_penis_today",
+      "title": "Sent my bot out to make some money and he came back missing an important part. Anyone have an affordable {mark}penis{/} so I can fix him?",
+      "chance": 3,
+      "duration": (2,3),
+      "cooldown": (5,15),
+      "request": {
+        "type": "part",
+        "slot": "penis",
+        "rate": "EDCB",
+        "minimal_integrity": 75,
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(2700,10*int((request_price*3.45+1)/10))",
+      },
+    },
+    {
+      "id": "selling_cpus_chipdude17",
+      "title": "Selling {mark}[reward[0]]{/} CPU in mint condition, no defects, id-silicon is burned-out 100%, instant delivery. {info}//chipdude17{/}",
+      "chance": 10,
+##      "allow_duplicates": 2,
+      "duration": (2,5),
+      "cooldown": (6,10),
+      "request": {
+        "type": "money",
+        "value": "10*int((reward_price*2.65+1)/10)",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_cpu_f",
+          },
+          {
+            "type": "part",
+            "id": "quadx",
+          },
+          {
+            "type": "part",
+            "id": "sr24_cpu_d",
+          },
+          {
+            "type": "part",
+            "id": "neurotech4",
+          },
+          {
+            "type": "part",
+            "id": "sr24_cpu_b",
+          },
+          {
+            "type": "part",
+            "id": "neurotech7",
+          },
+          {
+            "type": "part",
+            "id": "sr24_cpu_s",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "selling_powercore_circuitwiz",
+      "title": "Selling {mark}[reward[0]]{/} powercore in mint condition, highest power output in it's class, instant delivery. {info}//CircuitWiz{/}",
+      "chance": 10,
+##      "allow_duplicates": 2,
+      "duration": (2,5),
+      "cooldown": (6,10),
+      "request": {
+        "type": "money",
+        "value": "10*int((reward_price*2.10+1)/10)",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_powercore_f",
+          },
+          {
+            "type": "part",
+            "id": "sr24_powercore_e",
+          },
+          {
+            "type": "part",
+            "id": "nova",
+          },
+          {
+            "type": "part",
+            "id": "zeux5",
+          },
+          {
+            "type": "part",
+            "id": "sr24_powercore_b",
+          },
+          {
+            "type": "part",
+            "id": "sr24_powercore_a",
+          },
+          {
+            "type": "part",
+            "id": "sr24_powercore_s",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "trading_powercores_for_cpu",
+      "title": "{mark}[[[[TRADE]{/} Got too much {mark}powercores{/} in stock, willing to trade for {mark}processors{/}.",
+      "chance": 10,
+##      "allow_duplicates": 2,
+      "duration": (2,5),
+      "cooldown": (6,10),
+      "request": {
+        "type": "part",
+        "slot": "cpu",
+        "rate": "DCBAS",
+        "minimal_integrity": 75,
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_powercore_f",
+          },
+          {
+            "type": "part",
+            "id": "sr24_powercore_e",
+          },
+          {
+            "type": "part",
+            "id": "nova",
+          },
+          {
+            "type": "part",
+            "id": "zeux5",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "buying_combat_bot",
+      "title": "Want to buy female bodyguard bot for protection that isn't obvious. Should be able to talk their way out of situations whenever possible but ready for combat when needed.",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "bot",
+        "gender": "female",
+        "rate": "CBAS",
+        "minimal_integrity": 100,
+        "stable_psychocore": "yes",
+        "skills": {
+          "combat": "CBAS",
+          "social": "DCBAS",
+        },
+        "price_mods": {
+          "skill_mods": {
+            "bot_combat": (1.0,"mul_exp3",0.0,3.5),  ##  last param was 5.0 in vanilla and I believe it's an exponent
+            "bot_social": (1.0,"mul_exp3",0.0,1.0),
+          },
+        },
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(200000,request_price)",
+      },
+    },
+    {
+      "id": "buying_combat_bot_male",
+      "title": "Want to buy intimidating male bodyguard bot for protection. Danger is always around so must be ready for combat at any time.",
+      "chance": 4,
+      "duration": (2,5),
+      "cooldown": (10,18),
+      "request": {
+        "type": "bot",
+        "gender": "male",
+        "rate": "BAS",
+        "minimal_integrity": 100,
+        "stable_psychocore": "yes",
+        "skills": {
+          "combat": "BAS",
+        },
+        "price_mods": {
+          "skill_mods": {
+            "bot_combat":      (1.0,"mul_exp3",0.0,3.5),  ##  last param was 5.0 in vanilla and I believe it's an exponent
+          },
+        },
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(200000,request_price)",
+      },
+    },
+    {
+      "id": "buying_sextoy_wimp",
+      "title": "Yay, got a nice check on my 18th birthday and now it's time to buy myself a present! Will pay for a sexy bot with all the skills needed. Would be cool is she could be friendly too, you know like talking with me and stuff. Oh, and girls only, I like titties! Cheers!",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "bot",
+        "rate": "CBAS",
+        "gender": "female",
+        "minimal_integrity": 100,
+        "stable_psychocore": "yes",
+        "skills": {
+          "sex": "CBAS",
+          "social": "DCBAS",
+        },
+        "price_mods": {
+          "skill_mods": {
+            "bot_sex":         (1.0,"mul_exp3",0.0,3.0),
+            "bot_social":      (1.0,"mul_exp3",0.0,1.5),
+          },
+        },
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(100000,request_price)",
+      },
+    },
+    {
+      "id": "buying_sextoy_male",
+      "title": "Real men are such a pain, I want a cooperative male sex bot who lives only to please me! Will gladly pay extra for a bot with social skills who can go out in public without embarrassing me.",
+      "chance": 4,
+      "duration": (2,5),
+      "cooldown": (10,18),
+      "request": {
+        "type": "bot",
+        "rate": "CBAS",
+        "gender": "male",
+        "minimal_integrity": 100,
+        "stable_psychocore": "yes",
+        "skills": {
+          "sex": "CBAS",
+          "social": "DCBAS",
+        },
+        "price_mods": {
+          "skill_mods": {
+            "bot_sex":         (1.0,"mul_exp3",0.0,3.0),
+            "bot_social":      (1.0,"mul_exp3",0.0,2.0),
+          },
+        },
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(125000,request_price)",
+      },
+    },
+    {
+      "id": "buying_personal_assistant",
+      "title": "Looking for a female personal assistant bot to help my business. Multi-functional requirements: secretary, receptionist, maid, janitor, and more (wink!). Willing to pay top dollar for the right bot!",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "bot",
+        "rate": "CBAS",
+        "gender": "female",
+        "minimal_integrity": 100,
+        "stable_psychocore": "yes",
+        "skills": {
+          "sex": "DCBAS",
+          "social": "CBAS",
+        },
+        "price_mods": {
+          "skill_mods": {
+            "bot_sex":         (1.0,"mul_exp3",0.0,1.5),
+            "bot_social":      (1.0,"mul_exp3",0.0,3.0),
+          },
+        },
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(150000,request_price)",
+      },
+    },
+    {
+      "id": "buying_personal_assistant_male",
+      "title": "I want a male personal assistant/bodyguard bot to help my business and escort me to meetings. Main functions: personal protection, administrative assistant, and extra curricular activities!",
+      "chance": 4,
+      "duration": (2,5),
+      "cooldown": (10,18),
+      "request": {
+        "type": "bot",
+        "gender": "male",
+        "rate": "CBAS",
+        "minimal_integrity": 100,
+        "stable_psychocore": "yes",
+        "skills": {
+          "combat": "DCBAS",
+          "sex": "DCBAS",
+          "social": "CBAS",
+        },
+        "price_mods": {
+          "skill_mods": {
+            "bot_combat":      (1.0,"mul_exp3",0.0,1.0),
+            "bot_sex":         (1.0,"mul_exp3",0.0,1.0),
+            "bot_social":      (1.0,"mul_exp3",0.0,3.0),
+          },
+        },
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(175000,request_price)",
+      },
+    },
+    {
+      "id": "buying_repairbot",
+      "title": "Business is booming, so buying new female techie for our workshop. Want eye candy to keep customers interested and need reasonably good skills but can train further on site if needed.",
+      "chance": 10,
+      "duration": (2,5),
+      "cooldown": (8,16),
+      "request": {
+        "type": "bot",
+        "gender": "female",
+        "rate": "DCBAS",
+        "minimal_integrity": 100,
+        "stable_psychocore": "yes",
+        "skills": {
+          "electronics": "DCBAS",
+          "mechanics": "CBAS",
+        },
+        "price_mods": {
+          "skill_mods": {
+            "bot_electronics": (1.0,"mul_exp3",0.0,3.0),
+            "bot_mechanics":   (1.0,"mul_exp3",0.0,3.0),
+          },
+        },
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(75000,request_price)",
+      },
+    },
+    {
+      "id": "buying_repairbot_male",
+      "title": "My high tech home needs a good male techie bot. Strong technical skills are important but since my asshole husband left I could use some company.",
+      "chance": 4,
+      "duration": (2,5),
+      "cooldown": (10,18),
+      "request": {
+        "type": "bot",
+        "gender": "male",
+        "rate": "DCBAS",
+        "minimal_integrity": 100,
+        "stable_psychocore": "yes",
+        "skills": {
+          "sex": "DCBAS",
+          "social": "DCBAS",
+          "electronics": "DCBAS",
+          "mechanics": "CBAS",
+        },
+        "price_mods": {
+          "skill_mods": {
+            "bot_sex": (1.0,"mul_exp3",0.0,1.0),
+            "bot_social": (1.0,"mul_exp3",0.0,1.0),
+            "bot_electronics": (1.0,"mul_exp3",0.0,3.0),
+            "bot_mechanics":   (1.0,"mul_exp3",0.0,3.0),
+          },
+        },
+      },
+      "reward": {
+        "type": "money",
+        "value": "min(150000,request_price)",
+      },
+    },
+  ],
+}

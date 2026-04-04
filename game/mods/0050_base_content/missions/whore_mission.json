@@ -1,0 +1,50 @@
+﻿{
+  "mod_id": "whore_bot_mission",
+  "mod_description": "Make money sending your bot out as a street-walking whore, higher rated bots get better clients!",
+  "mod_priority": -600,
+  "missions": [
+    {
+      "id": "whore",
+      "title": "Whore",
+      "description": "Send {mark}[bot]{/} out as a street walker to earn money doing what [bot.heshe] was made for.",
+      "launch_text": "You explain to {mark}[bot]{/} what you expect from her. You select a sexy outfit to accentuate her assets and send her out to make you some money.",
+      "available": "now('night')",
+      "requirements": [
+        (True,"{mark}Night{/}"),
+        ("bot.gender=='female'","{mark}Bot{/} is {mark}female{/}"),
+        ("bot.bot_sex>='D'","{mark}Sex{/} at {mark}D+{/}"),
+        ("bot.autonomy>='E'","{mark}Autonomy{/} at {mark}E+{/}"),
+        ("bot.chassis.integrity>=75","{mark}Integrity{/} >= {mark}75%{/}"),
+        ("bot.psychocore.stability>=75","{mark}Psychocore: Stable{/}"),
+      ],
+      "duration": 1,
+      "costs": [],
+##  RESULTS PARAMETERS DAMAGE, LOOT, WARRANTY SEAL, AND TEXT ARE ALL IN EXTERNAL FUNCTION
+##  THIS IS STREETWALKING SO SUCCESS DEPENDS UPON COMBAT SKILLS
+##  MISSIONS TO ROBOSECHS WILL BE HANDLED DIFFERENTLY
+      "results": [
+        {
+          "weight": "((bot.bot_combat.level+1.2)**2.2)*2.2",   ##  Applies to all bots, success has a formula - ORIGINAL LINE
+##TEST          "weight": "((bot.bot_combat.level+0.45)**2.2)*2.2",  ##  this value makes all 3 outcomes about 33% for F rated Bot - FOR TESTING
+          "type": "flavor",
+          "call_label": "whore_bot_mission_results",
+          "result_text": "{mark}[bot]{/} returned looking a little bedraggled but [bot.heshe] earned good money for a bot with [bot.hisher] sex skill, rating, components, and condition.",
+        },
+        {
+          "weight": 5,  ##  S rated combat skill guarantees success
+          "condition": "bot.bot_combat<='S'",
+          "type": "flavor",
+          "call_label": "whore_bot_mission_fight",
+          "result_text": "{mark}[bot]{/} returned beat up but with the money [bot.heshe] earned. Thugs tried to rob [bot.himher] on the way home but [bot.heshe] fended them off.",
+        },
+        {
+          "weight": 5,  ##  S rated combat skill guarantees success
+          "condition": "bot.bot_combat<='S'",
+          "type": "flavor",
+          "call_label": "whore_bot_mission_failure",
+          "result_text": "After working, {mark}[bot]{/} was beaten and robbed on the way home. I'm lucky she made it home although she needs repair!",
+        },
+      ],
+    },
+  ],
+}

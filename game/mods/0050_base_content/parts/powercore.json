@@ -1,0 +1,72 @@
+﻿## do not edit, changes will be rewritten by game updates
+
+{
+  "mod_id": "base_game_parts_powercore",
+  "mod_description": "Base game content, bot parts, powercore.",
+  "mod_priority": -800,
+
+  "bot_parts": [
+    ## powercore ##############################################################
+    {
+      "id": "nova",
+      "name": "Nova",
+      "description": "Basic power core, commonly used for cheap models. May be insufficient for advanced models or roles.",
+      "rate": "D",
+      "xp_mult": {
+        "bot_combat": 0.83,
+        "bot_sex": 0.92,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_powercore",
+      "power_consumption": -200,
+      "damage_mult": 1.0,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("isolation_damaged",75,1),("isolation_damaged",50,3),("isolation_damaged",25,5),("isolation_damaged",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("mechanics",10),
+        ("electronics",90),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 8,
+        "cheap": 4,
+      },
+    },
+    {
+      "id": "zeux5",
+      "name": "ZeuX Mk.5",
+      "description": "Time-tested power core with enough output for most models and roles. May be insufficient for dedicated combat units.",
+      "rate": "C",
+      "xp_mult": {
+        "bot_combat": 1.00,
+        "bot_sex": 1.00,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_powercore",
+      "power_consumption": -400,
+      "damage_mult": 1.0,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("isolation_damaged",30,1),("isolation_damaged",15,3),("isolation_damaged",5,5),("isolation_damaged",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("mechanics",10),
+        ("electronics",90),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 6,
+        "cheap": 1,
+        "nice": 4,
+      },
+    },
+  ],
+}

@@ -1,0 +1,811 @@
+{
+  "mod_id": "squirrel_BBS_parts",
+  "mod_description": "Real Grey Market BBS offers for all SR24 and DSCS parts",
+  "mod_priority": -600,
+  "grey_market_offers": [
+    {
+      "id": "squirrel_DEF_arms",
+      "title": "{mark}Ray's Discount Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}value priced Arms{/} and stock is limited so don't delay. Sold in pairs only. {info}info@rays_bot.com{/}",
+      "chance": 18,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*2.0",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "arms_plastic",
+          },
+          {
+            "type": "part",
+            "id": "arms_plastan",
+          },
+          {
+            "type": "part",
+            "id": "sr24_arms_d",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_BC_arms",
+      "title": "{mark}Ray's Quality Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}high quality Arms{/} and stock is limited so don't delay. Sold in pairs only. {info}info@rays_bot.com{/}",
+      "chance": 12,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*2.0",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "arms_composite",
+          },
+          {
+            "type": "part",
+            "id": "sr24_arms_b",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_SA_arms",
+      "title": "{mark}Ray's Elite Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}elite Arms{/} and stock is limited so don't delay. Sold in pairs only. {info}info@rays_bot.com{/}",
+      "chance": 3,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*2.0",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_arms_a",
+          },
+          {
+            "type": "part",
+            "id": "sr24_arms_s",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_DEF_cpu",
+      "title": "{mark}Ray's Discount Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is a {mark}value priced CPU{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 18,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*3.15",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_cpu_f",
+          },
+          {
+            "type": "part",
+            "id": "sr24_cpu_d",
+          },
+          {
+            "type": "part",
+            "id": "quadx",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_BC_cpu",
+      "title": "{mark}Ray's Quality BOT PARTS!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is a {mark}high quality CPU{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 12,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*3.15",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "neurotech4",
+          },
+          {
+            "type": "part",
+            "id": "sr24_cpu_b",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_SA_cpu",
+      "title": "{mark}Ray's Elite Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is an {mark}elite CPU{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 3,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*3.15",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "neurotech7",
+          },
+          {
+            "type": "part",
+            "id": "sr24_cpu_s",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_DEF_eyes",
+      "title": "{mark}Ray's Discount Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}value priced Eyes{/} and stock is limited so don't delay. Sold in pairs only. {info}info@rays_bot.com{/}",
+      "chance": 18,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.75",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "ocu7",
+          },
+          {
+            "type": "part",
+            "id": "irida",
+          },
+          {
+            "type": "part",
+            "id": "sr24_eyes_f",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_BC_eyes",
+      "title": "{mark}Ray's Quality Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}high quality Eyes{/} and stock is limited so don't delay. Sold in pairs only. {info}info@rays_bot.com{/}",
+      "chance": 12,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.75",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_eyes_c",
+          },
+          {
+            "type": "part",
+            "id": "sr24_eyes_b",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_SA_eyes",
+      "title": "{mark}Ray's Elite Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}elite Eyes{/} and stock is limited so don't delay. Sold in pairs only. {info}info@rays_bot.com{/}",
+      "chance": 3,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.75",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_eyes_a",
+          },
+          {
+            "type": "part",
+            "id": "sr24_eyes_s",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_DEF_legs",
+      "title": "{mark}Ray's Discount Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}value priced Legs{/} and stock is limited so don't delay. Sold in pairs only. {info}info@rays_bot.com{/}",
+      "chance": 18,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.9",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "legs_plastic",
+          },
+          {
+            "type": "part",
+            "id": "legs_plastan",
+          },
+          {
+            "type": "part",
+            "id": "sr24_legs_d",
+          },
+
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_BC_legs",
+      "title": "{mark}Ray's Quality Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}high quality Legs{/} and stock is limited so don't delay. Sold in pairs only. {info}info@rays_bot.com{/}",
+      "chance": 12,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.9",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "legs_composite",
+          },
+          {
+            "type": "part",
+            "id": "sr24_legs_b",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_SA_legs",
+      "title": "{mark}Ray's Elite Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}elite Legs{/} and stock is limited so don't delay. Sold in pairs only. {info}info@rays_bot.com{/}",
+      "chance": 3,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.9",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_legs_a",
+          },
+          {
+            "type": "part",
+            "id": "sr24_legs_s",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_DEF_powercore",
+      "title": "{mark}Ray's Discount Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is a {mark}value priced Powercore{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 18,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*2.6",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "nova",
+          },
+          {
+            "type": "part",
+            "id": "sr24_powercore_f",
+          },
+          {
+            "type": "part",
+            "id": "sr24_powercore_e",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_BC_powercore",
+      "title": "{mark}Ray's Quality Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is a {mark}high quality Powercore{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 12,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*2.6",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "zeux5",
+          },
+          {
+            "type": "part",
+            "id": "sr24_powercore_b",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_SA_powercore",
+      "title": "{mark}Ray's Elite Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is an {mark}elite Powercore{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 3,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*2.6",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_powercore_a",
+          },
+          {
+            "type": "part",
+            "id": "sr24_powercore_s",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_DEF_skins",
+      "title": "{mark}Ray's Discount Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}value priced Skins{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 18,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.8",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_skin_f",
+          },
+          {
+            "type": "part",
+            "id": "ecoskin",
+          },
+          {
+            "type": "part",
+            "id": "hardskin",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_BC_skins",
+      "title": "{mark}Ray's Quality Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}high quality Skins{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 12,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.8",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_skin_c",
+          },
+          {
+            "type": "part",
+            "id": "sr24_skin_b",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_SA_skins",
+      "title": "{mark}Ray's Elite Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}elite Skins{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 3,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.8",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_skin_a",
+          },
+          {
+            "type": "part",
+            "id": "sr24_skin_s",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_DEF_vocoder",
+      "title": "{mark}Ray's Discount Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is a {mark}value priced Vocoder{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 18,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.7",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_vocoder_f",
+          },
+          {
+            "type": "part",
+            "id": "sr24_vocoder_e",
+          },
+          {
+            "type": "part",
+            "id": "invox",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_BC_vocoder",
+     "title": "{mark}Ray's Quality Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is a {mark}high quality Vocoder{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 12,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.7",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "aria",
+          },
+          {
+            "type": "part",
+            "id": "sr24_vocoder_c",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_SA_vocoder",
+      "title": "{mark}Ray's Elite Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is an {mark}elite Vocorder{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 3,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.7",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_vocoder_a",
+          },
+          {
+            "type": "part",
+            "id": "sr24_vocoder_s",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_DEF_vagina",
+      "title": "{mark}Ray's Discount Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is a {mark}value priced Vagina{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 18,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.95",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_vagina_f",
+          },
+          {
+            "type": "part",
+            "id": "sr24_vagina_e",
+          },
+          {
+            "type": "part",
+            "id": "sr24_vagina_d",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_BC_vagina",
+      "title": "{mark}Ray's Quality Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is a {mark}high quality Vagina{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 12,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.95",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_vagina_c",
+          },
+          {
+            "type": "part",
+            "id": "sr24_vagina_b",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_SA_vagina",
+      "title": "{mark}Ray's Elite Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This an {mark}elite quality Vagina{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 3,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.95",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_vagina_a",
+          },
+          {
+            "type": "part",
+            "id": "sr24_vagina_s",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_DEF_ears",
+      "title": "{mark}Ray's Discount Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}value priced Ears{/} and stock is limited so don't delay. Sold in pairs only. {info}info@rays_bot.com{/}",
+      "chance": 18,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.6",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_ears_f",
+          },
+          {
+            "type": "part",
+            "id": "sr24_ears_e",
+          },
+          {
+            "type": "part",
+            "id": "sr24_ears_d",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_BC_ears",
+      "title": "{mark}Ray's Quality Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}high quality Ears{/} and stock is limited so don't delay. Sold in pairs only. {info}info@rays_bot.com{/}",
+      "chance": 12,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.6",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_ears_c",
+          },
+          {
+            "type": "part",
+            "id": "sr24_ears_b",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_SA_ears",
+      "title": "{mark}Ray's Elite Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}elite quality Ears{/} and stock is limited so don't delay. Sold in pairs only. {info}info@rays_bot.com{/}",
+      "chance": 3,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.6",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_ears_a",
+          },
+          {
+            "type": "part",
+            "id": "sr24_ears_s",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_DEF_implants",
+      "title": "{mark}Ray's Discount Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}value priced Implants{/} and stock is limited so don't delay. Sold in complete sets only. {info}info@rays_bot.com{/}",
+      "chance": 18,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.65",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_implants_f",
+          },
+          {
+            "type": "part",
+            "id": "sr24_implants_e",
+          },
+          {
+            "type": "part",
+            "id": "sr24_implants_d",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_BC_implants",
+      "title": "{mark}Ray's Quality Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}high quality Implants{/} and stock is limited so don't delay. Sold in complete sets only. {info}info@rays_bot.com{/}",
+      "chance": 12,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.65",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_implants_c",
+          },
+          {
+            "type": "part",
+            "id": "sr24_implants_b",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_SA_implants",
+      "title": "{mark}Ray's Elite Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. These are {mark}elite quality Implants{/} and stock is limited so don't delay. Sold in complete sets only. {info}info@rays_bot.com{/}",
+      "chance": 3,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*1.65",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_implants_a",
+          },
+          {
+            "type": "part",
+            "id": "sr24_implants_s",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_DEF_penis",
+      "title": "{mark}Ray's Discount Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is a {mark}value priced Penis{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 6,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*2.05",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_penis_f",
+          },
+          {
+            "type": "part",
+            "id": "sr24_penis_e",
+          },
+          {
+            "type": "part",
+            "id": "sr24_penis_d",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_BC_penis",
+      "title": "{mark}Ray's Quality Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is a {mark}high quality Penis{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 4,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*2.05",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_penis_c",
+          },
+          {
+            "type": "part",
+            "id": "sr24_penis_b",
+          },
+        ],
+      ],
+    },
+    {
+      "id": "squirrel_SA_penis",
+      "title": "{mark}Ray's Elite Bot Parts!{/} For a limited time only, {mark}[reward[0]]{/} is available for immediate delivery. This is an {mark}elite quality Penis{/} and stock is limited so don't delay. {info}info@rays_bot.com{/}",
+      "chance": 1,
+      "duration": (2,4),
+      "cooldown": (16,32),
+      "request": {
+        "type": "money",
+        "value": "reward_price*2.05",
+      },
+      "reward": [
+        [
+          {
+            "type": "part",
+            "id": "sr24_penis_a",
+          },
+          {
+            "type": "part",
+            "id": "sr24_penis_s",
+          },
+        ],
+      ],
+    },
+  ],
+}

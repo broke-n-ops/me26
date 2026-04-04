@@ -1,0 +1,90 @@
+﻿{
+  "mod_id": "base_game_part_slots",
+  "mod_description": "Base game content, part slots.",
+  "mod_priority": -900,
+
+  "bot_part_slots": [
+    {
+      "id": "bot_cpu",
+      "name": "CPU",
+      "list_priority": -11,
+      "category_price_mult": 10.5,
+      "slot_tags": ["cpu"],
+      "beauty_weight": 0,
+      "event_damage": {
+        "mission": 5,
+      },
+    },
+    {
+      "id": "bot_eyes",
+      "name": "Eyes",
+      "list_priority": -10,
+      "category_price_mult": 3,
+      "slot_tags": [],
+      "beauty_weight": 50,
+      "event_damage": {
+        "training_combat": 5,
+        "mission": 15,
+      },
+    },
+    {
+      "id": "bot_vocoder",
+      "name": "Vocoder",
+      "list_priority": -8,
+      "category_price_mult": 2.7,
+      "slot_tags": [],
+      "beauty_weight": 30,
+      "event_damage": {
+        "mission": 10,
+      },
+    },
+    {
+      "id": "bot_powercore",
+      "name": "Powercore",
+      "list_priority": -7,
+      "category_price_mult": 7.5,
+      "slot_tags": ["powercore"],
+      "beauty_weight": 0,
+      "event_damage": {
+        "mission": 10,
+      },
+    },
+    {
+      "id": "bot_arms",
+      "name": "Arms",
+      "list_priority": -6,
+      "category_price_mult": 4.3,
+      "slot_tags": [],
+      "beauty_weight": 10,
+      "event_damage": {
+        "training_combat": 75,
+        "mission": 75,
+      },
+    },
+    {
+      "id": "bot_legs",
+      "name": "Legs",
+      "list_priority": -5,
+      "category_price_mult": 3.6,
+      "slot_tags": [],
+      "beauty_weight": 10,
+      "event_damage": {
+        "training_combat": 50,
+        "mission": 75,
+      },
+    },
+    {
+      "id": "bot_skin",
+      "name": "Skin Layer",
+      "list_priority": -4,
+      "category_price_mult": 3.3,
+      "slot_tags": [],
+      "beauty_weight": 100,
+      "event_damage": {
+        "training_combat": 100,
+        "training_sex": 100,
+        "mission": 100,
+      },
+    },
+  ],
+}

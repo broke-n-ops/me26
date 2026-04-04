@@ -1,0 +1,64 @@
+﻿{
+  "mod_id": "gigolo_bot_mission",
+  "mod_description": "Make money sending your male bot out to wealthy women as a gigolo! Easy money and lots of repeat business for the right bot!",
+  "mod_priority": -600,
+  "missions": [
+    {
+      "id": "gigolo",
+      "title": "Gigolo",
+      "description": "Send {mark}[bot]{/} to appointments with wealthy women as a gigolo. Easy money!",
+      "launch_text": "You tell {mark}[bot]{/} where to go to meet the client and about the 'special requests' they made when setting up the appointment.",
+      "available": "now('night')",
+      "requirements": [
+        (True,"{mark}Night{/}"),
+        ("bot.gender=='male'","{mark}Bot{/} is {mark}male{/}"),
+        ("bot.bot_sex>='D'","{mark}Sex{/} at {mark}D+{/}"),
+        ("bot.bot_social>='D'","{mark}Social{/} at {mark}D+{/}"),
+        ("bot.autonomy>='E'","{mark}Autonomy{/} at {mark}E+{/}"),
+        ("bot.chassis.integrity>=75","{mark}Integrity{/} >= {mark}75%{/}"),
+        ("bot.psychocore.stability>=75","{mark}Psychocore: Stable{/}"),
+      ],
+      "duration": 1,
+      "costs": [],
+##  RESULTS PARAMETERS DAMAGE, LOOT, WARRANTY SEAL, AND TEXT ARE ALL IN EXTERNAL FUNCTION
+##  GIGOLOS SERVE HIGH END CLIENTS BY APPOINTMENT BUT THE BOT COULD BE MUGGED ON THE WAY THERE OR ROBBED ON THE WAY HOME
+      "results": [
+        {
+          "weight": "((bot.bot_combat.level+1.2)**2.2)*0.73",   ##  Applies to all bots, success has a formula - ORIGINAL LINE
+##TEST          "weight": "((bot.bot_combat.level+0.45)**2.2)*0.295",  ##  this value makes all 3 outcomes about 33% for F rated Bot (sum of 3 clients is 33%) - FOR TESTING
+          "type": "flavor",
+          "call_label": "gigolo_bot_mission_client_a",         ##  Simon bot with dominating older woman in bedroom
+          "result_text": "{mark}[bot]{/} returned with more damage than I expected but the client said she wanted to dominate and she paid him the amount we agreed upon so I guess it's OK. ",
+        },
+        {
+          "weight": "((bot.bot_combat.level+1.2)**2.2)*0.73",   ##  Applies to all bots, success has a formula - ORIGINAL LINE
+##TEST          "weight": "((bot.bot_combat.level+0.45)**2.2)*0.295",  ##  this value makes all 3 outcomes about 33% for F rated Bot (sum of 3 clients is 33%) - FOR TESTING
+          "type": "flavor",
+          "call_label": "gigolo_bot_mission_client_b",         ##  Quinton bot with submissive business woman in office
+          "result_text": "{mark}[bot]{/} returned with minimal damage and with the amount of money the client promised. I like women clients who like to be dominated, easy money!",
+        },
+        {
+          "weight": "((bot.bot_combat.level+1.2)**2.2)*0.73",   ##  Applies to all bots, success has a formula - ORIGINAL LINE
+##TEST          "weight": "((bot.bot_combat.level+0.45)**2.2)*0.295",  ##  this value makes all 3 outcomes about 33% for F rated Bot (sum of 3 clients is 33%) - FOR TESTING
+          "type": "flavor",
+          "call_label": "gigolo_bot_mission_client_c",         ##  Raze bot with crazy cyberpunk woman in her apartment
+          "result_text": "{mark}[bot]{/} returned with the amount of money the client promised and a crazy story to tell. I almost wish I could have gone to this one myself!",
+        },
+        {
+          "weight": 5,  ##  S rated combat skill guarantees success
+          "condition": "bot.bot_combat<='S'",
+          "type": "flavor",
+          "call_label": "gigolo_bot_mission_robbed",
+          "result_text": "Thugs ambushed {mark}[bot]{/} on the way home after servicing the client! He tried to fight them off but he suffered a lot of damage and they took his money. Oh well, at least he made it home and I can repair the damage.",
+        },
+        {
+          "weight": 5,  ##  S rated combat skill guarantees success
+          "condition": "bot.bot_combat<='S'",
+          "type": "flavor",
+          "call_label": "gigolo_bot_mission_mugged",
+          "result_text": "{mark}[bot]{/} ran into some thugs as he came up from the subway on the way to the appointment. I'm lucky he made it home although he needs repair! The client was pissed when he didn't show up, shit!",
+        },
+      ],
+    },
+  ],
+}

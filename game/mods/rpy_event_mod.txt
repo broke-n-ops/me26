@@ -1,0 +1,46 @@
+﻿Game loads rpy files from game/mods folder too.
+You can place mods changing script without messing with vanilla codebase.
+
+Example of random event, copy-paste it into my_event.rpy to test.
+===============================================================================
+init python hide:
+  @random_event("home_rest")
+  def home_rest_test():
+    ## gather possible bots
+    valid_bots=[]
+    for bot in home.sexbots:
+      if bot:
+        if not bot.chassis.is_disabled:
+          ## can add other conditions here
+          valid_bots.append(bot)
+    ## if there is any valid bot, pick random and register event
+    if valid_bots:
+      bot=renpy.random.choice(valid_bots).id
+      ## give target event init label parameter of bot id
+      ## 25 is weight of event
+      ## 1 - rare, 100 - often
+      ## can use large (9999) weights during testing to ensure event trigger
+      return ("home_rest_test_init",(bot,),{}),25
+
+label home_rest_test_init(bot):
+  ## replace default situation choices with our, leading to event content
+  choice("home_rest_test:"+bot) "Continue"
+  return
+
+label home_rest_test(bot):
+  ## turn bot id to actual bot object
+  $bot=find_character(bot)
+  header "[home]"
+  "Event with bot: [bot]"
+  choice("advance_time") "Continue"
+  ## clean up referenced objects to avoid possible leaks/forgotten references
+  $bot=None
+  return
+===============================================================================
+
+Example of location roaming hook, adding trade offers to top NetConsole level.
+===============================================================================
+init python hide:
+  @event_handler("roaming_finalize_netconsole")
+  def add_trade_offers_to_top_netconsole():
+    choice(">>>netconsole_grey_market_check_offers:trade",title="Trade offers")

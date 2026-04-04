@@ -1,0 +1,196 @@
+﻿{
+  "mod_id": "base_game_missions_scavenge",
+  "mod_description": "Base game content, bot missions, Scavenge mission.",
+  "mod_priority": -600,
+  "missions": [
+    {
+      "id": "scavenge",
+      "title": "Scavenge",
+      "description": "Send {mark}[bot]{/} to search local dump for parts or other useful things. Requires some knowledge of {mark}mechanics{/} or {mark}electronics{/}. With high enough {mark}combat{/} it is mostly safe.",
+      "launch_text": "You explain to {mark}[bot]{/} what you expect from [bot.himher] and you give [bot.himher] an electronic tool to hack one of the entry doors into the dump along with a large bag to carry home whatever [bot.heshe] finds.\n\nOnce [bot.heshe] understands everything you send [bot.himher] to the dump site.\n\nWith some luck {mark}[bot]{/} should be back in a few hours with some goodies.",
+      "available": "mc.mechanics>='E' and mc.electronics>='E'",
+      "requirements": [
+        ("bot.bot_mechanics>='D' or bot.bot_electronics>='D'","{mark}Mechanics{/} and/or {mark}Electronics{/} at {mark}D+{/}"),
+        ("bot.autonomy>='D'","{mark}Autonomy{/} at {mark}D+{/}"),
+      ],
+
+      "duration": (1,2),
+      "costs": [],
+      "results": [
+        {
+          "weight": 100,
+          "type": "flavor",
+          "call_label": "scavenge_bot_mission_search_fail",
+          "result_text": "{size=-26} {/}",
+        },
+
+##  a new possibility in scavenging is not even getting into the dump using the next 3 entries
+##  getting in requires one of two things:
+##      hacking the door to open it which requires electronics skill
+##      bribing a guard with oral sex which requires sex skill
+##  if both are E or less there is a 15% chance of not getting in - all 3 entries true (5 each)
+##  if both are D or less there is a 10% chance of not getting in - 2 entries are true (5 each)
+##  if both are C or less there is a 5% chance of not getting in - 1 entry is true (5)
+##  if either is B or greater you always get in - no entries are true (0)
+
+        {
+          "weight": 10,
+          "condition": "bot.bot_sex<='E' and bot.bot_electronics<='E'",
+          "type": "flavor",
+          "call_label": "scavenge_bot_mission_entry_fail",
+          "result_text": "{size=-26} {/}",
+        },
+        {
+          "weight": 5,
+          "condition": "bot.bot_sex<='D' and bot.bot_electronics<='D'",
+          "type": "flavor",
+          "call_label": "scavenge_bot_mission_entry_fail",
+          "result_text": "{size=-26} {/}",
+        },
+        {
+          "weight": 5,
+          "condition": "bot.bot_sex<='C' and bot.bot_electronics<='C'",
+          "type": "flavor",
+          "call_label": "scavenge_bot_mission_entry_fail",
+          "result_text": "{size=-26} {/}",
+        },
+
+        {
+          "weight": 1,
+          "condition": "bot.bot_combat<='E'",
+          "type": "bot_dead",
+          "mood_change": (-500,-150),
+          "call_label": "scavenge_bot_mission_dead",
+          "result_text": "{size=-26} {/}",
+        },
+
+##  added a new 1% possibility of bot loss with combat D - E & F are now 2% from 2 1% conditions
+        {
+          "weight": 1,
+          "condition": "bot.bot_combat<='D'",
+          "type": "bot_dead",
+          "mood_change": (-500,-150),
+          "call_label": "scavenge_bot_mission_dead",
+          "result_text": "{size=-26} {/}",
+        },
+
+##  reduced this to 10 because condition below was added
+        {
+          "weight": 10,
+          "condition": "bot.bot_combat<='D'",
+          "type": "bot_damaged",
+          "damage": {
+            "skin": [(1,25)],
+            "any": [(-10,25),(-15,50),(-3,7)],
+          },
+          "xp_change": {
+            "bot_combat": (100,500),
+          },
+          "mood_change": (-100,-50),
+          "call_label": "scavenge_bot_mission_damaged",
+          "result_text": "{size=-26} {/}",
+        },
+
+##  added a new 5% possibility of bot damage with combat C
+        {
+          "weight": 5,
+          "condition": "bot.bot_combat<='C'",
+          "type": "bot_damaged",
+          "damage": {
+            "skin": [(1,25)],
+            "any": [(-10,25),(-15,50),(-3,7)],
+          },
+          "xp_change": {
+            "bot_combat": (100,500),
+          },
+          "mood_change": (-100,-50),
+          "call_label": "scavenge_bot_mission_damaged",
+          "result_text": "{size=-26} {/}",
+        },
+
+        {
+##  was a flat 50
+##  added social skill influence, 5 to 35 increase
+##  add successful scavenge count, 0 to 100 increase
+          "weight": "50+bot.bot_social.level*5+bot.scavenge_success",
+          ## nested results sub-table, choosen from only if this result is choosen first
+          "type": "results",
+          "results": [
+            {
+              "weight": "50+bot.bot_electronics.level*10",
+              "condition": "bot.bot_electronics>='D'",
+              "type": "parts_found",
+              "loot": [
+                {
+                  "type": "part",
+                  "event": "bot_scavenge_part_electronics",
+                  "tags": ["cheap","nice"],
+                  "filter": "lambda part:part.default_slot in ('bot_cpu','bot_eyes','bot_vocoder','bot_powercore','bot_ears')",
+                  "count": (1,3),
+                  "integrity": (1,100),
+                },
+              ],
+              "mood_change": (1,50),
+              "call_label": "scavenge_bot_mission_success_small",
+              "result_text": "{size=-26} {/}",
+            },
+            {
+              "weight": "15+bot.bot_electronics.level*5",
+              "condition": "bot.bot_electronics>='B'",
+              "type": "parts_found",
+              "loot": [
+                {
+                  "type": "part",
+                  "event_id": "bot_scavenge_part_electronics",
+                  "tags": ["good","luxury"],
+                  "filter": "lambda part:part.default_slot in ('bot_cpu','bot_eyes','bot_vocoder','bot_powercore','bot_ears')",
+                  "count": (1,3),
+                  "integrity": (1,100),
+                },
+              ],
+              "mood_change": (25,150),
+              "call_label": "scavenge_bot_mission_success_large",
+              "result_text": "{size=-26} {/}",
+            },
+            {
+              "weight": "50+bot.bot_mechanics.level*10",
+              "condition": "bot.bot_mechanics>='D'",
+              "type": "parts_found",
+              "loot": [
+                {
+                  "type": "part",
+                  "event_id": "bot_scavenge_part_mechanics",
+                  "tags": ["cheap","nice"],
+                  "filter": "lambda part:part.default_slot in ('bot_arms','bot_legs','bot_skin','bot_vagina','bot_penis','bot_implants')",
+                  "count": (1,3),
+                  "integrity": (1,100),
+                },
+              ],
+              "mood_change": (1,50),
+              "call_label": "scavenge_bot_mission_success_small",
+              "result_text": "{size=-26} {/}",
+            },
+            {
+              "weight": "15+bot.bot_electronics.level*5",
+              "condition": "bot.bot_mechanics>='B'",
+              "type": "parts_found",
+              "loot": [
+                {
+                  "type": "part",
+                  "event_id": "bot_scavenge_part_mechanics",
+                  "tags": ["good","luxury"],
+                  "filter": "lambda part:part.default_slot in ('bot_arms','bot_legs','bot_skin','bot_vagina','bot_penis','bot_implants')",
+                  "count": (1,3),
+                  "integrity": (1,100),
+                },
+              ],
+              "mood_change": (25,150),
+              "call_label": "scavenge_bot_mission_success_large",
+              "result_text": "{size=-26} {/}",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}

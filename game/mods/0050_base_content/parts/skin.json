@@ -1,0 +1,65 @@
+﻿## do not edit, changes will be rewritten by game updates
+
+{
+  "mod_id": "base_game_parts_skin",
+  "mod_description": "Base game content, bot parts, skin.",
+  "mod_priority": -800,
+
+  "bot_parts": [
+    ## skin ###################################################################
+    {
+      "id": "ecoskin",
+      "name": "EcoSkin",
+      "description": "Durable external layer with a soft-touch feel. Biodegradable. Eventually.",
+      "rate": "E",
+      "price_mult": 1.0,
+      "slot": "bot_skin",
+      "damage_mult": 0.9,
+      "damage_on_remove": 0,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("scratch",90,1),("scratch",75,2),("scratch",50,3),("scratch",25,5),("scratch",0,0),
+        ("skin_rip",100,1),("skin_rip",75,3),("skin_rip",50,5),("skin_rip",0,0),
+        ("skin_large_rip",30,1),("skin_large_rip",20,3),("skin_large_rip",10,5),("skin_large_rip",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("mechanics",100),
+      ],
+      "difficulty": 0.90,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 8,
+        "cheap": 10,
+      },
+    },
+    {
+      "id": "hardskin",
+      "name": "HardSkin",
+      "description": "Reinforced external layer, can withstand lots of damage while keeping a soft-touch feel.",
+      "rate": "D",
+      "price_mult": 1.0,
+      "slot": "bot_skin",
+      "damage_mult": 0.75,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("scratch",75,1),("scratch",50,2),("scratch",25,3),("scratch",0,0),
+        ("skin_rip",50,1),("skin_rip",25,3),("skin_rip",0,0),
+        ("skin_large_rip",10,1),("skin_large_rip",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("mechanics",100),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 8,
+        "cheap": 6,
+        "nice": 5,
+      },
+    },
+  ],
+}

@@ -1,0 +1,89 @@
+﻿## do not edit, changes will be rewritten by game updates
+
+{
+  "mod_id": "base_game_parts_cpu",
+  "mod_description": "Base game content, bot parts, CPU.",
+  "mod_priority": -800,
+
+  "bot_parts": [
+    ## processors #############################################################
+    {
+      "id": "quadx",
+      "name": "Quad|X",
+      "description": "Very budget processor unit, barely enough for normal functioning. Learning progress is slowed.",
+      "rate": "E",
+      "xp_mult": 0.5,
+      "price_mult": 1.0,
+      "slot": "bot_cpu",
+      "damage_mult": 1.1,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("electronics",75),
+        ("computers",25),
+      ],
+      "difficulty": 0.9,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 8,
+        "cheap": 6,
+      },
+    },
+    {
+      "id": "neurotech4",
+      "name": "NeuroTech v4",
+      "description": "Common processor unit, powerful enough for most bot models or roles.",
+      "rate": "C",
+      "xp_mult": 1.0,
+      "price_mult": 1.0,
+      "slot": "bot_cpu",
+      "damage_mult": 1.0,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("electronics",75),
+        ("computers",25),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 6,
+        "cheap": 1,
+        "nice": 6,
+        "good": 4,
+      },
+    },
+    {
+      "id": "neurotech7",
+      "name": "NeuroTech v7",
+      "description": "High-end processor unit, can support any known model or role. Special co-processors boosts learning progress by up to 100%.",
+      "rate": "A",
+      "xp_mult": 2.0,
+      "price_mult": 1.0,
+      "slot": "bot_cpu",
+      "damage_mult": 0.9,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("electronics",75),
+        ("computers",25),
+      ],
+      "difficulty": 1.1,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 3,
+        "good": 2,
+        "luxury": 4,
+      },
+    },
+  ],
+}

@@ -1,0 +1,73 @@
+﻿## do not edit, changes will be rewritten by game updates
+
+{
+  "mod_id": "base_game_parts_vocoder",
+  "mod_description": "Base game content, bot parts, vocoder.",
+  "mod_priority": -800,
+
+  "bot_parts": [
+    ## vocoder ################################################################
+    {
+      "id": "invox",
+      "name": "inVox/3.1",
+      "description": "Popular voice synthesizer, can't roar or sing in opera, but is generally pleasing and tunable.",
+      "rate": "D",
+      "xp_mult": {
+        "bot_social": 0.89,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_vocoder",
+      "damage_mult": 1.0,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("membrane_rip",50,1),("membrane_rip",25,3),("membrane_rip",10,5),("membrane_rip",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("electronics",70),
+        ("mechanics",25),
+        ("computers",5),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 10,
+        "cheap": 8,
+        "nice": 3,
+      },
+    },
+    {
+      "id": "aria",
+      "name": "Aria",
+      "description": "Improved voice synthesizer, popular in client-oriented models.",
+      "rate": "B",
+      "xp_mult": {
+        "bot_social": 1.17,
+      },
+      "price_mult": 1.0,
+      "slot": "bot_vocoder",
+      "damage_mult": 1.0,
+      "possible_defects": [
+        (None,100,100),(None,0,0),
+        ("membrane_rip",30,1),("membrane_rip",15,3),("membrane_rip",5,5),("membrane_rip",0,0),
+        ("destroyed",0,99999),
+      ],
+      "repair_skills": [
+        ("electronics",70),
+        ("mechanics",25),
+        ("computers",5),
+      ],
+      "difficulty": 1.0,
+      "list_target_chances": {
+      },
+      "list_target_tag_chances": {
+        "all": 7,
+        "cheap": 1,
+        "nice": 4,
+        "good": 4,
+        "luxury": 1,
+      },
+    },
+  ],
+}
