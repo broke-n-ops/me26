@@ -29,6 +29,7 @@
 **/*:Zone.Identifier
 
 /reference/
+/dist/
 
 .editorconfig
 .prettier*.*json
