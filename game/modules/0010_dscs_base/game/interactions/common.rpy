@@ -58,9 +58,9 @@
       if callable(action_info):
         action_info_arg=self.kwargs.copy()
         action_info_arg.update({"action":action,"title":title,"action_label":action_label})
-        if action_info.func_code.co_argcount:
+        if action_info.__code__.co_argcount:
           action_info=action_info(action_info_arg)
-        elif action_info.func_code.co_flags&inspect.CO_VARKEYWORDS:
+        elif action_info.__code__.co_flags&inspect.CO_VARKEYWORDS:
           action_info=action_info(**action_info_arg)
         else:
           action_info=action_info()

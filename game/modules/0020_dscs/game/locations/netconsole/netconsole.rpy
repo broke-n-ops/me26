@@ -43,8 +43,8 @@ label roaming_netconsole:
   "Bio4FA: {mark}confirmed{/}"
   ""
   "Mesh Network: {mark}26X9A{/}"
-  "Access point: {mark}[netconsole[entry_point]]{/}"
-  "Assigned IP: {mark}[netconsole[ip]]{/}"
+  "Access point: {mark}[netconsole['entry_point']]{/}"
+  "Assigned IP: {mark}[netconsole['ip']]{/}"
   call random_event("roaming_netconsole")
   if _return=="default":
     choice(None) "Messages"

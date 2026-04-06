@@ -13,7 +13,7 @@ init -600 python:
     def __eq__(cls,other):
       return cls is other or cls.id==other
     def __ne__(cls,other):
-      return not cls.__eq__(other)
+      return not (cls is other or cls.id==other)
     def __str__(cls):
       return str(cls.name)
     def __call__(cls,*args,**kwargs):

@@ -81,6 +81,16 @@ init -500 python:
       return current_phase-other_phase
     def __eq__(self,other):
       return self.__cmp__(other)==0
+    def __lt__(self,other):
+      return self.__cmp__(other)<0
+    def __le__(self,other):
+      return self.__cmp__(other)<=0
+    def __gt__(self,other):
+      return self.__cmp__(other)>0
+    def __ge__(self,other):
+      return self.__cmp__(other)>=0
+    def __ne__(self,other):
+      return self.__cmp__(other)!=0
     def __str__(self):
       description=getattr(self.phase,"description","")
       if callable(description):
@@ -128,7 +138,7 @@ init -500 python:
       return self.started and not self.ended
     def advance(self,new_phase=None):
       if new_phase is None:
-        phases=sorted([v for v in self._phases if isinstance(v,(int,long))])
+        phases=sorted([v for v in self._phases if isinstance(v,int)])
         cur_phase=phases.index(self.phase.num_id)
         if cur_phase+1<len(phases):
           new_phase=phases[cur_phase+1]

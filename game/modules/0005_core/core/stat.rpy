@@ -82,6 +82,18 @@ init -100 python:
     def __cmp__(self,level):
       level=self._normalize_level(level)
       return self.level-level
+    def __lt__(self,level):
+      return self.__cmp__(level)<0
+    def __le__(self,level):
+      return self.__cmp__(level)<=0
+    def __eq__(self,level):
+      return self.__cmp__(level)==0
+    def __ge__(self,level):
+      return self.__cmp__(level)>=0
+    def __gt__(self,level):
+      return self.__cmp__(level)>0
+    def __ne__(self,level):
+      return self.__cmp__(level)!=0
     def __str__(self):
       return str(self.name)
     @property
