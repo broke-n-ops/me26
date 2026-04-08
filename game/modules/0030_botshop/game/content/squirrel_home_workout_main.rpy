@@ -387,9 +387,9 @@ label hw_workout_exercise:
       elif hw_workouts_today==2:                  ##  benefit halved for second workout
         "After doing a few situps and pushups you wonder if working out more than once a day is worth it."
         ""
-        $hw_entry_value=random.randint(hw_no_equipment_min/2,hw_no_equipment_max/2)
+        $hw_entry_value=random.randint(hw_no_equipment_min//2,hw_no_equipment_max//2)
         $mc.give_xp("strength",hw_entry_value)    ##  low benefit for situps and pushups
-        $hw_entry_value=random.randint(hw_no_equipment_min/2,hw_no_equipment_max/2)
+        $hw_entry_value=random.randint(hw_no_equipment_min//2,hw_no_equipment_max//2)
         $mc.give_xp("stamina",hw_entry_value)     ##  low benefit for situps and pushups
       if hw_found_rockys==0:
         call hw_initiate_dealer_visits
